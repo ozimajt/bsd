@@ -3,93 +3,69 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 0 0% 98%; /* gray-50 */
-    --foreground: 0 0% 9%; /* gray-900 */
-    --card: 0 0% 100%; /* white */
-    --card-foreground: 0 0% 9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%; /* gray-100 */
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%; /* gray-500 */
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%; /* gray-200 */
-    --input: 0 0% 89.8%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 0 0% 3.9%; /* black */
-    --foreground: 0 0% 98%; /* gray-50 */
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%; /* gray-900 */
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%; /* gray-400 */
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-  }
-}
-
-@layer base {
   html {
     scroll-behavior: smooth;
-    @apply text-body-base;
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial,
-      sans-serif;
+    @apply bg-light-background text-light-foreground dark:bg-dark-background dark:text-dark-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, '"SF Pro Display"', '"SF Pro Text"', '"Helvetica Neue"', Helvetica,
+      Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  * {
-    @apply border-border;
+  .light {
+    color-scheme: light;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-bold tracking-tight text-balance;
-  }
-
-  h1 {
-    @apply text-heading-1;
-  }
-  h2 {
-    @apply text-heading-2;
-  }
-  h3 {
-    @apply text-heading-3;
+  .dark {
+    color-scheme: dark;
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  /* Layout */
+  .section-padding {
+    @apply py-20 sm:py-24 lg:py-32;
+  }
+
+  /* Typography */
+  .main-headline {
+    @apply text-fluid-7xl font-bold leading-none tracking-tight;
+  }
+  .section-title {
+    @apply text-fluid-5xl font-bold tracking-tight;
+  }
+  .card-title {
+    @apply text-fluid-3xl font-semibold;
+  }
+  .section-description {
+    @apply text-fluid-lg max-w-3xl mx-auto leading-relaxed text-light-muted-foreground dark:text-dark-muted-foreground;
+  }
+  .card-description {
+    @apply text-fluid-base leading-relaxed text-light-muted-foreground dark:text-dark-muted-foreground;
+  }
+  .eyebrow-text {
+    @apply text-base font-normal tracking-wide text-light-muted-foreground dark:text-dark-muted-foreground;
+  }
+
+  /* Buttons */
+  .cta-button-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white text-base font-medium px-8 py-3 rounded-full transition-all duration-200 hover:scale-105;
+  }
+  .cta-button-secondary {
+    @apply border border-light-border dark:border-dark-border hover:border-light-foreground/50 dark:hover:border-dark-foreground/50 text-light-foreground dark:text-dark-foreground text-base font-medium px-8 py-3 rounded-full transition-all duration-200 hover:bg-light-secondary dark:hover:bg-dark-secondary;
+  }
+
+  /* Cards */
+  .info-card {
+    @apply bg-light-card dark:bg-dark-card hover:bg-light-secondary dark:hover:bg-dark-secondary rounded-2xl p-8 transition-all duration-300 hover:scale-105 border border-light-border dark:border-dark-border;
+  }
+  .pricing-card {
+    @apply bg-light-card dark:bg-dark-card rounded-2xl p-8 transition-all duration-300 hover:scale-105 border border-light-border dark:border-dark-border;
+  }
+  .pricing-card-popular {
+    @apply border-blue-500/50 dark:border-blue-500/50 bg-blue-500/5 dark:bg-blue-500/5;
   }
 }

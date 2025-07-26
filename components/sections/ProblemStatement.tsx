@@ -21,21 +21,19 @@ export default function ProblemStatement() {
   ]
 
   return (
-    <section className="py-20 sm:py-32 bg-secondary">
+    <section className="section-padding bg-light-secondary dark:bg-dark-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2>The Challenge</h2>
-          <p className="text-muted-foreground text-body-lg max-w-3xl mx-auto mt-6">
+          <h2 className="section-title mb-6">The Challenge</h2>
+          <p className="section-description">
             Construction businesses face mounting pressure in an increasingly competitive tender landscape.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {problems.map((problem, index) => (
-            <div key={index} className="group">
-              <div className="bg-background hover:bg-accent rounded-2xl p-8 transition-all duration-300 hover:scale-105 border">
-                <h3>{problem.title}</h3>
-                <p className="text-muted-foreground text-body-base mt-4">{problem.description}</p>
-              </div>
+            <div key={index} className="info-card">
+              <h3 className="card-title mb-4">{problem.title}</h3>
+              <p className="card-description">{problem.description}</p>
             </div>
           ))}
         </div>

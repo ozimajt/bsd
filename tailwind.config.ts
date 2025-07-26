@@ -1,77 +1,31 @@
 import type { Config } from "tailwindcss"
+import plugin from "tailwindcss/plugin"
+import defaultConfig from "shadcn/ui/tailwind.config"
 
 const config: Config = {
-  darkMode: ["class"],
+  ...defaultConfig,
   content: [
+    ...defaultConfig.content,
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
+    ...defaultConfig.theme,
     extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
+      ...defaultConfig.theme.extend,
       fontFamily: {
         sans: [
           "-apple-system",
           "BlinkMacSystemFont",
-          "SF Pro Display",
-          "SF Pro Text",
-          "Helvetica Neue",
+          '"SF Pro Display"',
+          '"SF Pro Text"',
+          '"Helvetica Neue"',
           "Helvetica",
           "Arial",
           "sans-serif",
         ],
-      },
-      fontSize: {
-        "heading-1": ["clamp(3rem, 10vw, 8rem)", { lineHeight: "1" }],
-        "heading-2": ["clamp(2.5rem, 8vw, 6rem)", { lineHeight: "1.1" }],
-        "heading-3": ["clamp(2rem, 6vw, 3rem)", { lineHeight: "1.2" }],
-        "body-lg": ["clamp(1.125rem, 2vw, 1.25rem)", { lineHeight: "1.6" }],
-        "body-base": ["clamp(1rem, 1.5vw, 1.125rem)", { lineHeight: "1.5" }],
-        "body-sm": ["clamp(0.875rem, 1vw, 1rem)", { lineHeight: "1.4" }],
-        "body-xs": ["clamp(0.75rem, 0.8vw, 0.875rem)", { lineHeight: "1.3" }],
       },
       letterSpacing: {
         tighter: "-0.05em",
@@ -80,28 +34,43 @@ const config: Config = {
       backdropBlur: {
         xl: "24px",
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    ...defaultConfig.plugins,
+    plugin(({ addUtilities, theme }) => {
+      const newUtilities = {
+        ".text-fluid-base": {
+          fontSize: "clamp(1rem, 0.95rem + 0.25vw, 1.125rem)", // 16px -> 18px
+        },
+        ".text-fluid-lg": {
+          fontSize: "clamp(1.125rem, 1rem + 0.625vw, 1.5rem)", // 18px -> 24px
+        },
+        ".text-fluid-xl": {
+          fontSize: "clamp(1.25rem, 1.05rem + 1vw, 1.875rem)", // 20px -> 30px
+        },
+        ".text-fluid-2xl": {
+          fontSize: "clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem)", // 24px -> 36px
+        },
+        ".text-fluid-3xl": {
+          fontSize: "clamp(1.875rem, 1.5rem + 1.875vw, 3rem)", // 30px -> 48px
+        },
+        ".text-fluid-4xl": {
+          fontSize: "clamp(2.25rem, 1.75rem + 2.5vw, 3.75rem)", // 36px -> 60px
+        },
+        ".text-fluid-5xl": {
+          fontSize: "clamp(3rem, 2.25rem + 3.75vw, 5rem)", // 48px -> 80px
+        },
+        ".text-fluid-6xl": {
+          fontSize: "clamp(3.75rem, 2.75rem + 5vw, 6rem)", // 60px -> 96px
+        },
+        ".text-fluid-7xl": {
+          fontSize: "clamp(4.5rem, 3.25rem + 6.25vw, 8rem)", // 72px -> 128px
+        },
+      }
+      addUtilities(newUtilities, ["responsive"])
+    }),
+  ],
 }
 
 export default config
