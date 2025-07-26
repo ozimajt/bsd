@@ -63,7 +63,7 @@ export default function Hero() {
 
           <p
             className="max-w-4xl mx-auto mb-12 font-bold text-xl text-muted-foreground sm:text-2xl md:text-3xl"
-            style={{ lineHeight: "1.35" }}
+            style={{ lineHeight: "1.05" }}
           >
             Expert tender writing and analysis services that help construction businesses secure more contracts with our
             proven 65% win rate methodology.
