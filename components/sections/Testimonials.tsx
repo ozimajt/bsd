@@ -24,28 +24,31 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="py-20 sm:py-32 bg-black dark:bg-black light:bg-white transition-colors duration-300">
+    <section id="testimonials" aria-labelledby="testimonials-heading" className="py-20 bg-background sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white dark:text-white light:text-gray-900 mb-6 tracking-tight">
+        <div className="mb-16 text-center">
+          <h2
+            id="testimonials-heading"
+            className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+          >
             Client Success
           </h2>
-          <p className="text-white/80 dark:text-white/80 light:text-gray-700 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Hear from construction businesses who've transformed their tender success with our expertise.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="group">
-              <div className="bg-white/5 dark:bg-white/5 light:bg-white hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:scale-105 border border-white/10 dark:border-white/10 light:border-gray-200 h-full flex flex-col shadow-lg light:shadow-xl">
-                <blockquote className="text-white/90 dark:text-white/90 light:text-gray-700 text-lg leading-relaxed mb-8 flex-1">
+              <div className="flex flex-col h-full p-8 transition-all duration-300 bg-secondary border rounded-2xl shadow-sm border-border dark:bg-white/5 hover:scale-105 hover:shadow-md dark:hover:border-white/20">
+                <blockquote className="flex-1 mb-8 text-lg leading-relaxed text-foreground">
                   "{testimonial.quote}"
                 </blockquote>
 
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-white/10 dark:bg-white/10 light:bg-gray-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white dark:text-white light:text-gray-700 font-semibold text-lg">
+                  <div className="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-muted dark:bg-white/10">
+                    <span className="text-lg font-semibold text-foreground">
                       {testimonial.name
                         .split(" ")
                         .map((n) => n[0])
@@ -53,10 +56,8 @@ export default function Testimonials() {
                     </span>
                   </div>
                   <div>
-                    <div className="text-white dark:text-white light:text-gray-900 font-semibold">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-white/60 dark:text-white/60 light:text-gray-600 text-sm">
+                    <div className="font-semibold text-foreground">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground">
                       {testimonial.role}, {testimonial.company}
                     </div>
                   </div>

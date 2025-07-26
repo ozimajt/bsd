@@ -46,20 +46,16 @@ export default function Services() {
   ]
 
   return (
-    <section
-      id="services"
-      aria-labelledby="services-heading"
-      className="py-20 bg-white dark:bg-black sm:py-32 transition-colors duration-300"
-    >
+    <section id="services" aria-labelledby="services-heading" className="py-20 bg-background sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <h2
             id="services-heading"
-            className="mb-6 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
+            className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             Our Services
           </h2>
-          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700 dark:text-white/80 sm:text-xl">
+          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Choose the perfect solution for your tender success needs.
           </p>
         </div>
@@ -79,20 +75,14 @@ export default function Services() {
                 className={`flex flex-col h-full p-8 transition-all duration-300 border rounded-2xl shadow-sm hover:scale-105 hover:shadow-md ${
                   service.popular
                     ? "bg-blue-50 border-blue-200 dark:bg-blue-500/5 dark:border-blue-500/50"
-                    : "bg-gray-50 border-gray-200 dark:bg-white/5 dark:border-white/10"
+                    : "bg-secondary border-border dark:bg-white/5"
                 }`}
               >
                 <div className="mb-8 text-center">
-                  <h3 className="mb-2 text-2xl font-semibold text-gray-900 dark:text-white sm:text-3xl">
-                    {service.name}
-                  </h3>
-                  <div className="mb-2 text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">
-                    {service.price}
-                  </div>
-                  <p className="text-sm font-medium text-gray-600 dark:text-white/60">{service.duration}</p>
-                  <p className="mt-4 text-base leading-relaxed text-gray-700 dark:text-white/80">
-                    {service.description}
-                  </p>
+                  <h3 className="mb-2 text-2xl font-semibold text-foreground sm:text-3xl">{service.name}</h3>
+                  <div className="mb-2 text-4xl font-bold text-foreground sm:text-5xl">{service.price}</div>
+                  <p className="text-sm font-medium text-muted-foreground">{service.duration}</p>
+                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">{service.description}</p>
                 </div>
 
                 <div className="flex-1">
@@ -110,7 +100,7 @@ export default function Services() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        <span className="text-sm leading-relaxed text-gray-600 dark:text-white/80">{feature}</span>
+                        <span className="text-sm leading-relaxed text-muted-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -120,7 +110,7 @@ export default function Services() {
                   className={`w-full px-6 py-3 font-medium rounded-full transition-all duration-200 hover:scale-105 ${
                     service.popular
                       ? "bg-blue-600 text-white hover:bg-blue-700"
-                      : "bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:border-white/30 dark:hover:bg-white/20"
+                      : "bg-white text-foreground border border-border hover:bg-muted dark:bg-white/10 dark:text-white dark:border-white/20 dark:hover:bg-white/20"
                   }`}
                 >
                   Get Started
