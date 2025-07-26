@@ -21,10 +21,7 @@ export default function Navigation() {
           {/* Middle - Navigation */}
           <nav className="hidden lg:block" aria-label="Main navigation">
             <div className="flex items-center space-x-8">
-              <Link
-                href="#overview"
-                className="text-sm font-medium text-foreground border-b-2 border-foreground pb-1 transition-colors"
-              >
+              <Link href="#overview" className="text-sm font-medium text-foreground transition-colors">
                 Overview
               </Link>
               <Link
@@ -51,9 +48,6 @@ export default function Navigation() {
               >
                 Contact
               </Link>
-              <button className="px-6 py-2 text-sm font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors">
-                Book Consultation
-              </button>
             </div>
           </nav>
 
@@ -99,10 +93,7 @@ export default function Navigation() {
           aria-label="Mobile navigation"
         >
           <div className="px-4 pt-4 pb-6 space-y-4">
-            <Link
-              href="#overview"
-              className="block px-3 py-2 text-base font-medium text-foreground border-l-2 border-foreground"
-            >
+            <Link href="#overview" className="block px-3 py-2 text-base font-medium text-foreground">
               Overview
             </Link>
             <Link
@@ -129,11 +120,6 @@ export default function Navigation() {
             >
               Contact
             </Link>
-            <div className="px-3 pt-4">
-              <button className="w-full px-6 py-3 text-sm font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors">
-                Book Consultation
-              </button>
-            </div>
             <div className="px-3 pt-2 flex items-center justify-between">
               <span className="text-sm font-medium text-muted-foreground">Shopping Bag</span>
               <button

@@ -1,6 +1,6 @@
 "use client"
 
-import { Moon, Sun, Monitor } from "lucide-react"
+import { Moon, Sun } from "lucide-react"
 import { useTheme } from "./theme-provider"
 import { useEffect, useState } from "react"
 
@@ -13,81 +13,49 @@ export function ThemeToggle() {
   }, [])
 
   if (!mounted) {
-    return <div className="w-16 h-8 bg-gray-200 dark:bg-gray-800 rounded-full border animate-pulse" />
+    return <div className="w-12 h-6 bg-gray-200 dark:bg-gray-800 rounded-full border animate-pulse" />
   }
 
-  const cycleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark")
-    } else if (theme === "dark") {
-      setTheme("system")
-    } else {
-      setTheme("light")
-    }
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light")
   }
 
   const getIcon = () => {
-    switch (theme) {
-      case "light":
-        return <Sun className="w-4 h-4 text-yellow-500" />
-      case "dark":
-        return <Moon className="w-4 h-4 text-blue-400" />
-      case "system":
-        return <Monitor className="w-4 h-4 text-gray-500" />
-      default:
-        return <Sun className="w-4 h-4 text-yellow-500" />
-    }
+    return theme === "light" ? (
+      <Sun className="w-3 h-3 text-yellow-500" />
+    ) : (
+      <Moon className="w-3 h-3 text-purple-400" />
+    )
   }
 
   const getPosition = () => {
-    switch (theme) {
-      case "light":
-        return "translate-x-0"
-      case "dark":
-        return "translate-x-4"
-      case "system":
-        return "translate-x-8"
-      default:
-        return "translate-x-0"
-    }
+    return theme === "light" ? "translate-x-0" : "translate-x-6"
   }
 
   const getTrackColor = () => {
-    switch (theme) {
-      case "light":
-        return "bg-blue-100 border-blue-200"
-      case "dark":
-        return "bg-gray-800 border-gray-700"
-      case "system":
-        return "bg-purple-100 dark:bg-purple-900 border-purple-200 dark:border-purple-700"
-      default:
-        return "bg-blue-100 border-blue-200"
-    }
+    return theme === "light" ? "bg-purple-100 border-purple-200" : "bg-gray-800 border-gray-700"
   }
 
   return (
     <button
-      onClick={cycleTheme}
-      className={`relative w-16 h-8 rounded-full border transition-all duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500/50 ${getTrackColor()}`}
-      aria-label={`Switch to ${theme === "light" ? "dark" : theme === "dark" ? "system" : "light"} theme`}
-      title={`Current theme: ${theme}. Click to cycle through themes.`}
+      onClick={toggleTheme}
+      className={`relative w-12 h-6 rounded-full border transition-all duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500/50 ${getTrackColor()}`}
+      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
+      title={`Current theme: ${theme}. Click to toggle.`}
     >
       <div
-        className={`absolute top-0.5 left-0.5 w-7 h-7 bg-white dark:bg-gray-100 rounded-full shadow-lg transition-all duration-300 ease-in-out flex items-center justify-center ${getPosition()}`}
+        className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white dark:bg-gray-100 rounded-full shadow-lg transition-all duration-300 ease-in-out flex items-center justify-center ${getPosition()}`}
       >
         {getIcon()}
       </div>
 
       {/* Track indicators */}
-      <div className="absolute inset-0 flex items-center justify-around px-1">
+      <div className="absolute inset-0 flex items-center justify-between px-1">
         <div
           className={`w-1 h-1 rounded-full transition-opacity duration-300 ${theme === "light" ? "opacity-0" : "opacity-30 bg-yellow-400"}`}
         />
         <div
-          className={`w-1 h-1 rounded-full transition-opacity duration-300 ${theme === "dark" ? "opacity-0" : "opacity-30 bg-blue-400"}`}
-        />
-        <div
-          className={`w-1 h-1 rounded-full transition-opacity duration-300 ${theme === "system" ? "opacity-0" : "opacity-30 bg-purple-400"}`}
+          className={`w-1 h-1 rounded-full transition-opacity duration-300 ${theme === "dark" ? "opacity-0" : "opacity-30 bg-purple-400"}`}
         />
       </div>
     </button>

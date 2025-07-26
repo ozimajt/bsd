@@ -26,7 +26,7 @@ export default function Hero() {
             Win More Tenders in Western Australia
           </h1>
 
-          <p className="max-w-4xl mx-auto mb-12 font-medium leading-relaxed text-lg text-muted-foreground sm:text-xl md:text-2xl">
+          <p className="max-w-4xl mx-auto mb-12 font-semibold leading-relaxed text-xl text-muted-foreground sm:text-2xl md:text-3xl">
             Expert tender writing and analysis services that help construction businesses secure more contracts with our
             proven 65% win rate methodology.
           </p>
@@ -34,7 +34,7 @@ export default function Hero() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <button
               onClick={scrollToServices}
-              className="px-8 py-3 text-base font-semibold text-white bg-blue-600 rounded-full transition-all duration-200 hover:scale-105 hover:bg-blue-700"
+              className="px-8 py-3 text-base font-semibold text-white bg-purple-600 rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700"
             >
               Explore Services
             </button>
@@ -49,7 +49,7 @@ export default function Hero() {
             Tender BSD now features industry-leading analysis capabilities.{" "}
             <a
               href="#services"
-              className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+              className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
             >
               Learn more →
             </a>

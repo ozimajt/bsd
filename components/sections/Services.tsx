@@ -65,7 +65,7 @@ export default function Services() {
             <div key={index} className="relative group">
               {service.popular && (
                 <div className="absolute z-10 transform -translate-x-1/2 -top-4 left-1/2">
-                  <span className="px-4 py-2 text-xs font-medium text-white bg-blue-600 rounded-full">
+                  <span className="px-4 py-2 text-xs font-medium text-white bg-purple-600 rounded-full">
                     Most Popular
                   </span>
                 </div>
@@ -74,7 +74,7 @@ export default function Services() {
               <div
                 className={`flex flex-col h-full p-8 transition-all duration-300 border rounded-2xl shadow-sm hover:scale-105 hover:shadow-md ${
                   service.popular
-                    ? "bg-blue-50 border-blue-200 dark:bg-blue-500/5 dark:border-blue-500/50"
+                    ? "bg-purple-50 border-purple-200 dark:bg-purple-500/5 dark:border-purple-500/50"
                     : "bg-secondary border-border dark:bg-white/5"
                 }`}
               >
@@ -90,7 +90,7 @@ export default function Services() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
                         <svg
-                          className="flex-shrink-0 w-5 h-5 mt-0.5 mr-3 text-blue-500 dark:text-blue-400"
+                          className="flex-shrink-0 w-5 h-5 mt-0.5 mr-3 text-purple-500 dark:text-purple-400"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -109,7 +109,7 @@ export default function Services() {
                 <button
                   className={`w-full px-6 py-3 font-semibold rounded-full transition-all duration-200 hover:scale-105 ${
                     service.popular
-                      ? "bg-blue-600 text-white hover:bg-blue-700"
+                      ? "bg-purple-600 text-white hover:bg-purple-700"
                       : "bg-white text-foreground border border-border hover:bg-muted dark:bg-white/10 dark:text-white dark:border-white/20 dark:hover:bg-white/20"
                   }`}
                 >
