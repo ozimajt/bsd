@@ -21,12 +21,50 @@ export default function Hero() {
 
           <h1
             id="hero-heading"
-            className="mb-8 font-extrabold leading-none tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+            className="mb-8 font-extrabold leading-none tracking-tight"
+            style={{ fontSize: "5vh", lineHeight: "1.1" }}
           >
-            Win More Tenders in Western Australia
+            <span className="block sm:inline">Win More Tenders </span>
+            <span className="block sm:inline">in Western Australia</span>
           </h1>
 
-          <p className="max-w-4xl mx-auto mb-12 font-semibold leading-relaxed text-xl text-muted-foreground sm:text-2xl md:text-3xl">
+          <style jsx>{`
+            @media (min-width: 640px) {
+              h1 {
+                font-size: 3.5rem !important;
+                line-height: 1.1 !important;
+              }
+            }
+            @media (min-width: 768px) {
+              h1 {
+                font-size: 4.5rem !important;
+                line-height: 1.1 !important;
+              }
+            }
+            @media (min-width: 1024px) {
+              h1 {
+                font-size: 5.5rem !important;
+                line-height: 1.1 !important;
+              }
+            }
+            @media (min-width: 1280px) {
+              h1 {
+                font-size: 6.5rem !important;
+                line-height: 1.1 !important;
+              }
+            }
+            @media (min-width: 1536px) {
+              h1 {
+                font-size: 7.5rem !important;
+                line-height: 1.1 !important;
+              }
+            }
+          `}</style>
+
+          <p
+            className="max-w-4xl mx-auto mb-12 font-bold text-xl text-muted-foreground sm:text-2xl md:text-3xl"
+            style={{ lineHeight: "1.35" }}
+          >
             Expert tender writing and analysis services that help construction businesses secure more contracts with our
             proven 65% win rate methodology.
           </p>
@@ -34,11 +72,11 @@ export default function Hero() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <button
               onClick={scrollToServices}
-              className="px-8 py-3 text-base font-semibold text-white bg-purple-600 rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700"
+              className="px-9 py-4 text-lg font-semibold text-white bg-purple-600 rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700"
             >
               Explore Services
             </button>
-            <button className="px-8 py-3 text-base font-semibold text-foreground bg-secondary border border-border rounded-full transition-all duration-200 hover:bg-muted">
+            <button className="px-9 py-4 text-lg font-semibold text-foreground bg-secondary border border-border rounded-full transition-all duration-200 hover:bg-muted">
               Book Free Consultation
             </button>
           </div>
