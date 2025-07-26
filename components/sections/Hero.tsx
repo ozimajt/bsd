@@ -22,7 +22,7 @@ export default function Hero() {
           <h1
             id="hero-heading"
             className="mb-8 font-extrabold leading-none tracking-tight"
-            style={{ fontSize: "5vh", lineHeight: "0.55" }}
+            style={{ fontSize: "5vh", lineHeight: "0.88" }}
           >
             <span className="block sm:inline">Win More Tenders </span>
             <span className="block sm:inline">in Western Australia</span>
@@ -32,31 +32,31 @@ export default function Hero() {
             @media (min-width: 640px) {
               h1 {
                 font-size: 3.5rem !important;
-                line-height: 0.55 !important;
+                line-height: 0.88 !important;
               }
             }
             @media (min-width: 768px) {
               h1 {
                 font-size: 4.5rem !important;
-                line-height: 0.55 !important;
+                line-height: 0.88 !important;
               }
             }
             @media (min-width: 1024px) {
               h1 {
                 font-size: 5.5rem !important;
-                line-height: 0.55 !important;
+                line-height: 0.88 !important;
               }
             }
             @media (min-width: 1280px) {
               h1 {
                 font-size: 6.5rem !important;
-                line-height: 0.55 !important;
+                line-height: 0.88 !important;
               }
             }
             @media (min-width: 1536px) {
               h1 {
                 font-size: 7.5rem !important;
-                line-height: 0.55 !important;
+                line-height: 0.88 !important;
               }
             }
           `}</style>
