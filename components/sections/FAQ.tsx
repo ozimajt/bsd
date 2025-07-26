@@ -34,32 +34,24 @@ export default function FAQ() {
   ]
 
   return (
-    <section className="py-20 sm:py-32 bg-black dark:bg-black light:bg-gray-50 transition-colors duration-300">
+    <section className="py-20 sm:py-32 bg-secondary">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white dark:text-white light:text-gray-900 mb-6 tracking-tight">
-            Frequently Asked
-          </h2>
-          <p className="text-white/80 dark:text-white/80 light:text-gray-700 text-lg sm:text-xl leading-relaxed">
+          <h2>Frequently Asked</h2>
+          <p className="text-muted-foreground text-body-lg mt-6">
             Get answers to common questions about our tender services.
           </p>
         </div>
-
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-white/10 dark:border-white/10 light:border-gray-200 rounded-2xl overflow-hidden shadow-lg light:shadow-xl"
-            >
+            <div key={index} className="border bg-background rounded-2xl overflow-hidden">
               <button
-                className="w-full px-8 py-6 text-left bg-white/5 dark:bg-white/5 light:bg-white hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-gray-50 transition-colors flex items-center justify-between"
+                className="w-full px-8 py-6 text-left hover:bg-accent transition-colors flex items-center justify-between"
                 onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
               >
-                <span className="text-white dark:text-white light:text-gray-900 text-lg sm:text-xl font-medium pr-8">
-                  {faq.question}
-                </span>
+                <span className="text-foreground text-xl font-medium pr-8">{faq.question}</span>
                 <svg
-                  className={`w-6 h-6 text-white/60 dark:text-white/60 light:text-gray-600 transition-transform duration-200 flex-shrink-0 ${
+                  className={`w-6 h-6 text-muted-foreground transition-transform duration-200 flex-shrink-0 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                   fill="none"
@@ -69,16 +61,13 @@ export default function FAQ() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  openIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >
-                <div className="px-8 pb-6">
-                  <p className="text-white/80 dark:text-white/80 light:text-gray-700 text-base sm:text-lg leading-relaxed">
-                    {faq.answer}
-                  </p>
+                <div className="px-8 pb-6 pt-2">
+                  <p className="text-muted-foreground text-body-base">{faq.answer}</p>
                 </div>
               </div>
             </div>

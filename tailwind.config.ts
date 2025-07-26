@@ -1,24 +1,63 @@
 import type { Config } from "tailwindcss"
-import defaultConfig from "shadcn/ui/tailwind.config"
 
 const config: Config = {
-  ...defaultConfig,
+  darkMode: ["class"],
   content: [
-    ...defaultConfig.content,
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    ...defaultConfig.theme,
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
-      ...defaultConfig.theme.extend,
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
       fontFamily: {
         sans: [
-          "SF Pro Display",
           "-apple-system",
           "BlinkMacSystemFont",
+          "SF Pro Display",
+          "SF Pro Text",
           "Helvetica Neue",
           "Helvetica",
           "Arial",
@@ -26,19 +65,13 @@ const config: Config = {
         ],
       },
       fontSize: {
-        // Fluid typography using clamp(min, preferred, max)
-        "fluid-xs": "clamp(0.75rem, 1.5vw, 0.875rem)", // 12px -> 14px
-        "fluid-sm": "clamp(0.875rem, 2vw, 1rem)", // 14px -> 16px
-        "fluid-base": "clamp(1rem, 2.5vw, 1.125rem)", // 16px -> 18px
-        "fluid-lg": "clamp(1.125rem, 3vw, 1.25rem)", // 18px -> 20px
-        "fluid-xl": "clamp(1.25rem, 3.5vw, 1.5rem)", // 20px -> 24px
-        "fluid-2xl": "clamp(1.5rem, 4vw, 1.875rem)", // 24px -> 30px
-        "fluid-3xl": "clamp(1.875rem, 5vw, 2.25rem)", // 30px -> 36px
-        "fluid-4xl": "clamp(2.25rem, 6vw, 3rem)", // 36px -> 48px
-        "fluid-5xl": "clamp(3rem, 7vw, 3.75rem)", // 48px -> 60px
-        "fluid-6xl": "clamp(3.75rem, 8.5vw, 4.5rem)", // 60px -> 72px
-        "fluid-7xl": "clamp(4.5rem, 10vw, 6rem)", // 72px -> 96px
-        "fluid-8xl": "clamp(6rem, 12vw, 8rem)", // 96px -> 128px
+        "heading-1": ["clamp(3rem, 10vw, 8rem)", { lineHeight: "1" }],
+        "heading-2": ["clamp(2.5rem, 8vw, 6rem)", { lineHeight: "1.1" }],
+        "heading-3": ["clamp(2rem, 6vw, 3rem)", { lineHeight: "1.2" }],
+        "body-lg": ["clamp(1.125rem, 2vw, 1.25rem)", { lineHeight: "1.6" }],
+        "body-base": ["clamp(1rem, 1.5vw, 1.125rem)", { lineHeight: "1.5" }],
+        "body-sm": ["clamp(0.875rem, 1vw, 1rem)", { lineHeight: "1.4" }],
+        "body-xs": ["clamp(0.75rem, 0.8vw, 0.875rem)", { lineHeight: "1.3" }],
       },
       letterSpacing: {
         tighter: "-0.05em",
@@ -48,14 +81,27 @@ const config: Config = {
         xl: "24px",
       },
       borderRadius: {
-        ...defaultConfig.theme.extend.borderRadius,
-        "4xl": "2rem",
-        "3xl": "1.5rem",
-        "2xl": "1rem",
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [...defaultConfig.plugins, require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate")],
 }
 
 export default config

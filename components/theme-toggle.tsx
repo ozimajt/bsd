@@ -1,46 +1,70 @@
 "use client"
 
-import { useTheme } from "next-themes"
+import { Moon, Sun, Monitor } from "lucide-react"
+import { useTheme } from "./theme-provider"
 import { useEffect, useState } from "react"
-import { Sun, Moon, Monitor } from "lucide-react"
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   if (!mounted) {
-    return <div className="w-12 h-6 rounded-full bg-gray-200 dark:bg-white/10 animate-pulse" />
+    return <div className="relative w-12 h-6 rounded-full bg-muted border border-border animate-pulse" />
   }
 
   const cycleTheme = () => {
-    if (theme === "light") setTheme("dark")
-    else if (theme === "dark") setTheme("system")
-    else setTheme("light")
+    if (theme === "light") {
+      setTheme("dark")
+    } else if (theme === "dark") {
+      setTheme("system")
+    } else {
+      setTheme("light")
+    }
   }
 
   const getIcon = () => {
-    if (theme === "light") return <Sun className="w-3 h-3 text-yellow-500" />
-    if (theme === "dark") return <Moon className="w-3 h-3 text-blue-400" />
-    return <Monitor className="w-3 h-3 text-gray-500 dark:text-gray-400" />
+    switch (theme) {
+      case "light":
+        return <Sun className="w-3 h-3 text-yellow-500" />
+      case "dark":
+        return <Moon className="w-3 h-3 text-blue-400" />
+      case "system":
+        return <Monitor className="w-3 h-3 text-muted-foreground" />
+      default:
+        // Handle case where theme might be system initially
+        if (typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return <Moon className="w-3 h-3 text-blue-400" />
+        }
+        return <Sun className="w-3 h-3 text-yellow-500" />
+    }
   }
 
   const getPosition = () => {
-    if (theme === "light") return "translate-x-0.5"
-    if (theme === "dark") return "translate-x-[22px]" // 48px (width) - 20px (indicator) - 2px (padding) - 4px (offset)
-    return "translate-x-[11px]" // Center
+    switch (theme) {
+      case "light":
+        return "translate-x-0.5"
+      case "dark":
+        return "translate-x-6"
+      case "system":
+        return "translate-x-3"
+      default:
+        return "translate-x-3"
+    }
   }
 
   return (
     <button
       onClick={cycleTheme}
-      className="relative w-12 h-6 rounded-full bg-gray-200 dark:bg-white/10 border border-gray-300 dark:border-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+      className="relative w-12 h-6 bg-muted rounded-full border border-border transition-all duration-300 hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
       aria-label={`Switch to ${theme === "light" ? "dark" : theme === "dark" ? "system" : "light"} theme`}
       title={`Current theme: ${theme}. Click to cycle.`}
     >
       <div
-        className={`absolute top-[1px] w-5 h-5 bg-white dark:bg-gray-800 rounded-full shadow-md transition-transform duration-300 flex items-center justify-center ${getPosition()}`}
+        className={`absolute top-0.5 w-5 h-5 bg-background rounded-full shadow-lg transform transition-transform duration-300 flex items-center justify-center ${getPosition()}`}
       >
         {getIcon()}
       </div>
