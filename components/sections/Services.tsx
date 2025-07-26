@@ -51,7 +51,7 @@ export default function Services() {
         <div className="mb-16 text-center">
           <h2
             id="services-heading"
-            className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+            className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             Our Services
           </h2>
@@ -79,9 +79,9 @@ export default function Services() {
                 }`}
               >
                 <div className="mb-8 text-center">
-                  <h3 className="mb-2 text-2xl font-semibold text-foreground sm:text-3xl">{service.name}</h3>
-                  <div className="mb-2 text-4xl font-bold text-foreground sm:text-5xl">{service.price}</div>
-                  <p className="text-sm font-medium text-muted-foreground">{service.duration}</p>
+                  <h3 className="mb-2 text-2xl font-bold text-foreground sm:text-3xl">{service.name}</h3>
+                  <div className="mb-2 text-4xl font-extrabold text-foreground sm:text-5xl">{service.price}</div>
+                  <p className="text-sm font-semibold text-muted-foreground">{service.duration}</p>
                   <p className="mt-4 text-base leading-relaxed text-muted-foreground">{service.description}</p>
                 </div>
 
@@ -107,7 +107,7 @@ export default function Services() {
                 </div>
 
                 <button
-                  className={`w-full px-6 py-3 font-medium rounded-full transition-all duration-200 hover:scale-105 ${
+                  className={`w-full px-6 py-3 font-semibold rounded-full transition-all duration-200 hover:scale-105 ${
                     service.popular
                       ? "bg-blue-600 text-white hover:bg-blue-700"
                       : "bg-white text-foreground border border-border hover:bg-muted dark:bg-white/10 dark:text-white dark:border-white/20 dark:hover:bg-white/20"

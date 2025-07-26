@@ -29,7 +29,7 @@ export default function Testimonials() {
         <div className="mb-16 text-center">
           <h2
             id="testimonials-heading"
-            className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+            className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             Client Success
           </h2>
@@ -48,7 +48,7 @@ export default function Testimonials() {
 
                 <div className="flex items-center">
                   <div className="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-muted dark:bg-white/10">
-                    <span className="text-lg font-semibold text-foreground">
+                    <span className="text-lg font-bold text-foreground">
                       {testimonial.name
                         .split(" ")
                         .map((n) => n[0])
@@ -56,7 +56,7 @@ export default function Testimonials() {
                     </span>
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">{testimonial.name}</div>
+                    <div className="font-bold text-foreground">{testimonial.name}</div>
                     <div className="text-sm text-muted-foreground">
                       {testimonial.role}, {testimonial.company}
                     </div>

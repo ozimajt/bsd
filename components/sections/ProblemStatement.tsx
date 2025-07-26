@@ -26,7 +26,7 @@ export default function ProblemStatement() {
         <div className="mb-16 text-center">
           <h2
             id="problem-heading"
-            className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+            className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             The Challenge
           </h2>
@@ -39,7 +39,7 @@ export default function ProblemStatement() {
           {problems.map((problem, index) => (
             <div key={index} className="group">
               <div className="p-8 transition-all duration-300 bg-background border border-border rounded-2xl shadow-sm dark:bg-white/5 hover:scale-105 hover:shadow-md dark:hover:border-white/20">
-                <h3 className="mb-4 text-2xl font-semibold text-foreground sm:text-3xl">{problem.title}</h3>
+                <h3 className="mb-4 text-2xl font-bold text-foreground sm:text-3xl">{problem.title}</h3>
                 <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">{problem.description}</p>
               </div>
             </div>

@@ -39,7 +39,7 @@ export default function FAQ() {
         <div className="mb-16 text-center">
           <h2
             id="faq-heading"
-            className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+            className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             Frequently Asked
           </h2>
@@ -58,7 +58,7 @@ export default function FAQ() {
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <span className="pr-8 text-lg font-medium text-foreground sm:text-xl">{faq.question}</span>
+                  <span className="pr-8 text-lg font-semibold text-foreground sm:text-xl">{faq.question}</span>
                   <svg
                     className={`flex-shrink-0 w-6 h-6 transition-transform duration-200 text-muted-foreground ${
                       openIndex === index ? "rotate-180" : ""

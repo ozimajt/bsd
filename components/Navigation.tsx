@@ -13,7 +13,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-11">
           <div className="flex-shrink-0">
             <Link href="/" className="text-foreground hover:opacity-70 transition-opacity" aria-label="Tender BSD Home">
-              <span className="text-lg font-medium">🍎</span>
+              <span className="text-lg font-semibold">🍎</span>
             </Link>
           </div>
 
@@ -21,31 +21,31 @@ export default function Navigation() {
             <div className="ml-10 flex items-baseline space-x-8">
               <Link
                 href="#services"
-                className="text-xs font-normal text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 Services
               </Link>
               <Link
                 href="#about"
-                className="text-xs font-normal text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 About
               </Link>
               <Link
                 href="#testimonials"
-                className="text-xs font-normal text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 Testimonials
               </Link>
               <Link
                 href="#faq"
-                className="text-xs font-normal text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 FAQ
               </Link>
               <Link
                 href="#contact"
-                className="text-xs font-normal text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 Contact
               </Link>
@@ -99,35 +99,35 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-12">
             <div className="flex items-center space-x-8">
-              <h1 className="text-lg font-medium text-foreground">Tender BSD</h1>
+              <h1 className="text-lg font-semibold text-foreground">Tender BSD</h1>
               <nav className="hidden sm:flex items-center space-x-6" aria-label="Secondary navigation">
                 <Link
                   href="#overview"
-                  className="pb-3 text-xs font-normal text-foreground border-b-2 border-foreground transition-colors"
+                  className="pb-3 text-xs font-medium text-foreground border-b-2 border-foreground transition-colors"
                 >
                   Overview
                 </Link>
                 <Link
                   href="#services"
-                  className="pb-3 text-xs font-normal text-muted-foreground hover:text-foreground transition-colors"
+                  className="pb-3 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Services
                 </Link>
                 <Link
                   href="#results"
-                  className="pb-3 text-xs font-normal text-muted-foreground hover:text-foreground transition-colors"
+                  className="pb-3 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Results
                 </Link>
                 <Link
                   href="#testimonials"
-                  className="pb-3 text-xs font-normal text-muted-foreground hover:text-foreground transition-colors"
+                  className="pb-3 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Compare
                 </Link>
               </nav>
             </div>
-            <button className="px-4 py-2 text-xs font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors">
+            <button className="px-4 py-2 text-xs font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors">
               Book Consultation
             </button>
           </div>
@@ -139,31 +139,31 @@ export default function Navigation() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
               href="#services"
-              className="block px-3 py-2 text-sm font-normal text-muted-foreground hover:text-foreground"
+              className="block px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
             >
               Services
             </Link>
             <Link
               href="#about"
-              className="block px-3 py-2 text-sm font-normal text-muted-foreground hover:text-foreground"
+              className="block px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
             >
               About
             </Link>
             <Link
               href="#testimonials"
-              className="block px-3 py-2 text-sm font-normal text-muted-foreground hover:text-foreground"
+              className="block px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
             >
               Testimonials
             </Link>
             <Link
               href="#faq"
-              className="block px-3 py-2 text-sm font-normal text-muted-foreground hover:text-foreground"
+              className="block px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
             >
               FAQ
             </Link>
             <Link
               href="#contact"
-              className="block px-3 py-2 text-sm font-normal text-muted-foreground hover:text-foreground"
+              className="block px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
             >
               Contact
             </Link>

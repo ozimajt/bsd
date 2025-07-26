@@ -28,7 +28,7 @@ export default function ValueProps() {
         <div className="mb-16 text-center">
           <h2
             id="value-props-heading"
-            className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+            className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             Proven Results
           </h2>
@@ -41,10 +41,10 @@ export default function ValueProps() {
           {metrics.map((metric, index) => (
             <div key={index} className="text-center group">
               <div className="p-8 transition-all duration-300 bg-background border rounded-2xl shadow-sm border-border dark:bg-white/5 hover:scale-105 hover:shadow-md dark:hover:border-white/20">
-                <div className="mb-4 text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl">
+                <div className="mb-4 text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl md:text-7xl">
                   {metric.value}
                 </div>
-                <div className="mb-2 text-xl font-semibold text-foreground sm:text-2xl">{metric.label}</div>
+                <div className="mb-2 text-xl font-bold text-foreground sm:text-2xl">{metric.label}</div>
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{metric.description}</p>
               </div>
             </div>

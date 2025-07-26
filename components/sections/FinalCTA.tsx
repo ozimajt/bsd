@@ -10,7 +10,7 @@ export default function FinalCTA() {
       <div className="max-w-6xl mx-auto px-4 text-center sm:px-6 lg:px-8">
         <h2
           id="cta-heading"
-          className="mb-8 text-4xl font-bold leading-none tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
+          className="mb-8 text-4xl font-extrabold leading-none tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
         >
           Ready to Win More Tenders?
         </h2>
@@ -22,11 +22,11 @@ export default function FinalCTA() {
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <button
             onClick={scrollToServices}
-            className="px-8 py-3 text-base font-medium text-white bg-blue-600 rounded-full transition-all duration-200 hover:scale-105 hover:bg-blue-700"
+            className="px-8 py-3 text-base font-semibold text-white bg-blue-600 rounded-full transition-all duration-200 hover:scale-105 hover:bg-blue-700"
           >
             Choose Your Service
           </button>
-          <button className="px-8 py-3 text-base font-medium text-foreground bg-secondary border border-border rounded-full transition-all duration-200 hover:bg-muted">
+          <button className="px-8 py-3 text-base font-semibold text-foreground bg-secondary border border-border rounded-full transition-all duration-200 hover:bg-muted">
             Schedule Free Call
           </button>
         </div>
