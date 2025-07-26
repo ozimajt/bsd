@@ -23,9 +23,7 @@ export default function Hero() {
             id="hero-heading"
             className="mb-8 font-extrabold leading-none tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
           >
-            <span className="block">Win More</span>
-            <span className="block">Tenders in</span>
-            <span className="block">Western Australia</span>
+            Win More Tenders in Western Australia
           </h1>
 
           <p className="max-w-4xl mx-auto mb-12 font-medium leading-relaxed text-lg text-muted-foreground sm:text-xl md:text-2xl">
