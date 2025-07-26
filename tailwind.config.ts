@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss"
-import plugin from "tailwindcss/plugin"
 import defaultConfig from "shadcn/ui/tailwind.config"
 
 const config: Config = {
@@ -15,17 +14,67 @@ const config: Config = {
     ...defaultConfig.theme,
     extend: {
       ...defaultConfig.theme.extend,
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
       fontFamily: {
         sans: [
           "-apple-system",
           "BlinkMacSystemFont",
-          '"SF Pro Display"',
-          '"SF Pro Text"',
-          '"Helvetica Neue"',
+          "SF Pro Display",
+          "SF Pro Text",
+          "Helvetica Neue",
           "Helvetica",
           "Arial",
           "sans-serif",
         ],
+      },
+      fontSize: {
+        xs: ["0.75rem", { lineHeight: "1rem" }],
+        sm: ["0.875rem", { lineHeight: "1.25rem" }],
+        base: ["1rem", { lineHeight: "1.5rem" }],
+        lg: ["1.125rem", { lineHeight: "1.75rem" }],
+        xl: ["1.25rem", { lineHeight: "1.75rem" }],
+        "2xl": ["1.5rem", { lineHeight: "2rem" }],
+        "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
+        "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
+        "5xl": ["3rem", { lineHeight: "1" }],
+        "6xl": ["3.75rem", { lineHeight: "1" }],
+        "7xl": ["4.5rem", { lineHeight: "1" }],
+        "8xl": ["6rem", { lineHeight: "1" }],
+        "9xl": ["8rem", { lineHeight: "1" }],
       },
       letterSpacing: {
         tighter: "-0.05em",
@@ -36,41 +85,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    ...defaultConfig.plugins,
-    plugin(({ addUtilities, theme }) => {
-      const newUtilities = {
-        ".text-fluid-base": {
-          fontSize: "clamp(1rem, 0.95rem + 0.25vw, 1.125rem)", // 16px -> 18px
-        },
-        ".text-fluid-lg": {
-          fontSize: "clamp(1.125rem, 1rem + 0.625vw, 1.5rem)", // 18px -> 24px
-        },
-        ".text-fluid-xl": {
-          fontSize: "clamp(1.25rem, 1.05rem + 1vw, 1.875rem)", // 20px -> 30px
-        },
-        ".text-fluid-2xl": {
-          fontSize: "clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem)", // 24px -> 36px
-        },
-        ".text-fluid-3xl": {
-          fontSize: "clamp(1.875rem, 1.5rem + 1.875vw, 3rem)", // 30px -> 48px
-        },
-        ".text-fluid-4xl": {
-          fontSize: "clamp(2.25rem, 1.75rem + 2.5vw, 3.75rem)", // 36px -> 60px
-        },
-        ".text-fluid-5xl": {
-          fontSize: "clamp(3rem, 2.25rem + 3.75vw, 5rem)", // 48px -> 80px
-        },
-        ".text-fluid-6xl": {
-          fontSize: "clamp(3.75rem, 2.75rem + 5vw, 6rem)", // 60px -> 96px
-        },
-        ".text-fluid-7xl": {
-          fontSize: "clamp(4.5rem, 3.25rem + 6.25vw, 8rem)", // 72px -> 128px
-        },
-      }
-      addUtilities(newUtilities, ["responsive"])
-    }),
-  ],
+  plugins: [...defaultConfig.plugins, require("tailwindcss-animate")],
 }
 
 export default config

@@ -21,19 +21,35 @@ export default function ProblemStatement() {
   ]
 
   return (
-    <section className="section-padding bg-light-secondary dark:bg-dark-background">
+    <section
+      id="about"
+      aria-labelledby="problem-heading"
+      className="py-20 bg-gray-50 dark:bg-black sm:py-32 transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="section-title mb-6">The Challenge</h2>
-          <p className="section-description">
+        <div className="mb-16 text-center">
+          <h2
+            id="problem-heading"
+            className="mb-6 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
+          >
+            The Challenge
+          </h2>
+          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700 dark:text-white/80 sm:text-xl">
             Construction businesses face mounting pressure in an increasingly competitive tender landscape.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
           {problems.map((problem, index) => (
-            <div key={index} className="info-card">
-              <h3 className="card-title mb-4">{problem.title}</h3>
-              <p className="card-description">{problem.description}</p>
+            <div key={index} className="group">
+              <div className="p-8 transition-all duration-300 bg-white border border-gray-200 rounded-2xl shadow-sm dark:bg-white/5 dark:border-white/10 hover:scale-105 hover:shadow-md">
+                <h3 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white sm:text-3xl">
+                  {problem.title}
+                </h3>
+                <p className="text-base leading-relaxed text-gray-600 dark:text-white/70 sm:text-lg">
+                  {problem.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

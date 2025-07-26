@@ -8,33 +8,52 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section
+      id="overview"
+      aria-labelledby="hero-heading"
+      className="relative min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white overflow-hidden transition-colors duration-300"
+    >
       <Navigation />
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-24">
-        <div className="text-center max-w-6xl mx-auto">
-          <p className="eyebrow-text mb-4">Tender BSD</p>
-          <h1 className="main-headline mb-8">
+
+      <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-24 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="mb-4 font-normal tracking-wide text-sm text-gray-600 dark:text-white/60 sm:text-base">
+            Tender BSD
+          </p>
+
+          <h1
+            id="hero-heading"
+            className="mb-8 font-bold leading-none tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+          >
             <span className="block">Win More</span>
             <span className="block">Tenders in</span>
             <span className="block">Western Australia</span>
           </h1>
-          <p className="section-description mb-12">
+
+          <p className="max-w-4xl mx-auto mb-12 font-normal leading-relaxed text-lg text-gray-700 dark:text-white/80 sm:text-xl md:text-2xl">
             Expert tender writing and analysis services that help construction businesses secure more contracts with our
             proven 65% win rate methodology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button onClick={scrollToServices} className="cta-button-primary">
+
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <button
+              onClick={scrollToServices}
+              className="px-8 py-3 text-base font-medium text-white bg-blue-600 rounded-full transition-all duration-200 hover:scale-105 hover:bg-blue-700"
+            >
               Explore Services
             </button>
-            <button className="cta-button-secondary">Book Free Consultation</button>
+            <button className="px-8 py-3 text-base font-medium text-gray-900 bg-gray-100 border border-gray-300 rounded-full dark:text-white dark:bg-white/5 dark:border-white/30 transition-all duration-200 hover:bg-gray-200 dark:hover:bg-white/10">
+              Book Free Consultation
+            </button>
           </div>
         </div>
+
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <p className="text-sm font-normal text-center text-light-muted-foreground dark:text-dark-muted-foreground">
+          <p className="text-sm font-normal text-center text-gray-600 dark:text-white/60">
             Tender BSD now features industry-leading analysis capabilities.{" "}
             <a
               href="#services"
-              className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+              className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
             >
               Learn more →
             </a>
