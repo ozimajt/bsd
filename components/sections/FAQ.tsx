@@ -79,7 +79,7 @@ export default function FAQ() {
                 }`}
               >
                 <div className="px-8 pb-6">
-                  <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">{faq.answer}</p>
+                  <p className="text-base leading-relaxed text-muted-foreground sm:text-lg py-[1em]">{faq.answer}</p>
                 </div>
               </div>
             </div>

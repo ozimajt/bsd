@@ -31,7 +31,7 @@ export default function ProblemStatement() {
             The Challenge
           </h2>
           <p className="max-w-3xl mx-auto text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Construction businesses face mounting pressure in an increasingly competitive tender landscape.
+            All businesses, especially construction and civil, face mounting pressure balancing on site and office work in an increasingly competitive tender landscape.
           </p>
         </div>
 

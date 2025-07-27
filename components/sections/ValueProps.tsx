@@ -33,7 +33,7 @@ export default function ValueProps() {
             Proven Results
           </h2>
           <p className="max-w-3xl mx-auto text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Our track record speaks for itself with measurable outcomes that drive your business forward.
+            We are a local WA team of experienced and award winning professionals, each specialising in different field of tendering process. Our track record speaks for itself with measurable outcomes that drive your business forward.
           </p>
         </div>
 
