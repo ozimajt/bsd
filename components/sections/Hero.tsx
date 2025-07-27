@@ -17,47 +17,71 @@ export default function Hero() {
 
       <div className="flex flex-col items-center min-h-screen px-4 pt-24 sm:px-6 lg:px-8 justify-center">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="mb-4 font-bold text-purple-600 tracking-tight text-lg sm:text-2xl">We help you </p>
+          <p className="mb-4 font-bold text-purple-600 tracking-tight text-2xl">We help you </p>
 
           <h1
             id="hero-heading"
-            className="mb-6 sm:mb-8 font-extrabold leading-none tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
-            style={{ lineHeight: "0.88" }}
+            className="mb-8 font-extrabold leading-none tracking-tight"
+            style={{ fontSize: "5vh", lineHeight: "0.88" }}
           >
-            <span className="block">Win More Tenders </span>
-            <span className="block tracking-tighter">in Western Australia</span>
+            <span className="block sm:inline">Win More Tenders </span>
+            <span className="block sm:inline tracking-tighter">in Western Australia</span>
           </h1>
 
           <style jsx>{`
-            @media (max-width: 639px) {
+            @media (min-width: 640px) {
               h1 {
-                font-size: 5vh !important;
+                font-size: 3.5rem !important;
+                line-height: 0.88 !important;
+              }
+            }
+            @media (min-width: 768px) {
+              h1 {
+                font-size: 4.5rem !important;
+                line-height: 0.88 !important;
+              }
+            }
+            @media (min-width: 1024px) {
+              h1 {
+                font-size: 5.5rem !important;
+                line-height: 0.88 !important;
+              }
+            }
+            @media (min-width: 1280px) {
+              h1 {
+                font-size: 6.5rem !important;
+                line-height: 0.88 !important;
+              }
+            }
+            @media (min-width: 1536px) {
+              h1 {
+                font-size: 7.5rem !important;
                 line-height: 0.88 !important;
               }
             }
           `}</style>
 
           <p
-            className="max-w-4xl mx-auto mb-8 sm:mb-12 font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground tracking-tight px-4 sm:px-0"
+            className="max-w-4xl mx-auto mb-12 font-bold text-xl text-muted-foreground sm:text-2xl md:text-3xl tracking-tight"
             style={{ lineHeight: "1.05" }}
           >
             Expert tender writing and analysis services that help construction businesses secure more contracts with our
             proven methodology.
           </p>
 
-          <div className="flex flex-col items-center justify-center gap-3 sm:gap-4 sm:flex-row px-4 sm:px-0">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <button
               onClick={scrollToServices}
-              className="w-full sm:w-auto px-6 sm:px-9 py-3 sm:py-4 font-semibold text-white rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700 bg-purple-600 text-lg sm:text-xl"
+              className="px-9 py-4 font-semibold text-white rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700 bg-purple-600 text-xl"
             >
               Explore Services
             </button>
-            <button className="w-full sm:w-auto px-6 sm:px-9 py-3 sm:py-4 text-lg font-semibold text-foreground border rounded-full transition-all duration-200 hover:bg-muted bg-secondary border-border">
+            <button className="px-9 py-4 text-lg font-semibold text-foreground border rounded-full transition-all duration-200 hover:bg-muted bg-secondary border-border">
               Book Consultation
             </button>
           </div>
 
-          <p className="mt-8 sm:mt-12 text-xs sm:text-sm font-medium text-center text-muted-foreground px-4 sm:px-0">
+          <p className="mt-12 text-sm font-medium text-center text-muted-foreground">
             Tender BSD now features industry-leading analysis capabilities.{" "}
             <a
               href="#services"

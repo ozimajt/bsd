@@ -34,42 +34,33 @@ export default function FAQ() {
   ]
 
   return (
-    <section
-      id="faq"
-      aria-labelledby="faq-heading"
-      className="border-t border-border py-16 sm:py-24 lg:py-32 xl:py-40 bg-secondary"
-    >
+    <section id="faq" aria-labelledby="faq-heading" className="border-t border-border py-32 sm:py-40 bg-secondary">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 sm:mb-16 text-center">
+        <div className="mb-16 text-center">
           <h2
             id="faq-heading"
-            className="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground"
+            className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             Frequently Asked
           </h2>
-          <p className="leading-relaxed text-muted-foreground font-semibold text-lg sm:text-xl lg:text-2xl px-4 sm:px-0">
+          <p className="leading-relaxed text-muted-foreground font-semibold text-2xl">
             Get answers to common questions about our tender services.
           </p>
         </div>
 
-        <div className="space-y-3 sm:space-y-4">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="overflow-hidden border rounded-xl sm:rounded-2xl border-border bg-background shadow-sm"
-            >
+            <div key={index} className="overflow-hidden border rounded-2xl border-border bg-background shadow-sm">
               <h3>
                 <button
-                  className="flex items-center justify-between w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-left transition-colors bg-background hover:bg-muted/50 dark:bg-white/5 dark:hover:bg-white/10"
+                  className="flex items-center justify-between w-full px-8 py-6 text-left transition-colors bg-background hover:bg-muted/50 dark:bg-white/5 dark:hover:bg-white/10"
                   onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <span className="pr-4 sm:pr-6 lg:pr-8 text-base sm:text-lg lg:text-xl font-semibold text-foreground">
-                    {faq.question}
-                  </span>
+                  <span className="pr-8 text-lg font-semibold text-foreground sm:text-xl">{faq.question}</span>
                   <svg
-                    className={`flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-200 text-muted-foreground ${
+                    className={`flex-shrink-0 w-6 h-6 transition-transform duration-200 text-muted-foreground ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                     fill="none"
@@ -87,10 +78,8 @@ export default function FAQ() {
                   openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-5 lg:pb-6">
-                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-muted-foreground py-[1em]">
-                    {faq.answer}
-                  </p>
+                <div className="px-8 pb-6">
+                  <p className="text-base leading-relaxed text-muted-foreground sm:text-lg py-[1em]">{faq.answer}</p>
                 </div>
               </div>
             </div>

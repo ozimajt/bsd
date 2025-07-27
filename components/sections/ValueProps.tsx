@@ -26,31 +26,31 @@ export default function ValueProps() {
     <section
       id="results"
       aria-labelledby="value-props-heading"
-      className="border-t border-border py-16 sm:py-24 lg:py-32 xl:py-40 bg-secondary"
+      className="border-t border-border py-32 sm:py-40 bg-secondary"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 sm:mb-16 text-center">
+        <div className="mb-16 text-center">
           <h2
             id="value-props-heading"
-            className="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground"
+            className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             Proven Results
           </h2>
-          <p className="max-w-3xl mx-auto leading-relaxed text-muted-foreground tracking-normal font-semibold text-lg sm:text-xl lg:text-2xl leading-5 sm:leading-6 px-4 sm:px-0">
+          <p className="max-w-3xl mx-auto leading-relaxed text-muted-foreground tracking-normal font-semibold text-2xl leading-6">
             We are a local team of experienced and award winning professionals, each specialising in crucial tendering
             process. Our track record speaks for itself with measurable outcomes that drive your business forward.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric, index) => (
             <div key={index} className="text-center group">
-              <div className="p-6 sm:p-8 transition-all duration-300 bg-background border rounded-2xl shadow-sm border-border hover:scale-105 hover:shadow-md hover:bg-muted/30 dark:bg-white/5 dark:hover:bg-white/10 dark:hover:border-white/20">
-                <div className="mb-3 sm:mb-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground">
+              <div className="p-8 transition-all duration-300 bg-background border rounded-2xl shadow-sm border-border hover:scale-105 hover:shadow-md hover:bg-muted/30 dark:bg-white/5 dark:hover:bg-white/10 dark:hover:border-white/20">
+                <div className="mb-4 text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl md:text-7xl">
                   {metric.value}
                 </div>
-                <div className="mb-2 text-lg sm:text-xl lg:text-2xl font-bold text-foreground">{metric.label}</div>
-                <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">{metric.description}</p>
+                <div className="mb-2 text-xl font-bold text-foreground sm:text-2xl">{metric.label}</div>
+                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{metric.description}</p>
               </div>
             </div>
           ))}
