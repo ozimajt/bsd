@@ -59,7 +59,7 @@ export default function ProblemStatement() {
             </h2>
 
             {/* Supporting Text - moved directly after heading */}
-            <p className="font-medium text-xl leading-[1.4rem] max-w-5xl pr-[17rem] mb-16">
+            <p className="font-semibold text-2xl leading-[1.75rem] max-w-5xl pr-[17rem] mb-16">
               <span className="text-purple-400">Powered by local expertise and proven methodologies.</span>{" "}
               <span className="text-gray-400">
                 With deep understanding of WA government requirements and evaluation criteria, our tender specialists
@@ -86,7 +86,7 @@ export default function ProblemStatement() {
             className="p-16 bg-gray-900/50 border border-gray-800 rounded-3xl text-left cursor-pointer hover:border-gray-700 transition-colors"
           >
             <h3 className="text-4xl font-bold text-white mb-4">Your Tender Success System</h3>
-            <p className="text-xl font-medium leading-[1.4rem] text-gray-400 max-w-4xl">
+            <p className="text-xl text-gray-400 leading-tight max-w-4xl">
               Tender BSD takes the complexity out of winning. After analyzing your tender opportunity, our WA
               specialists craft responses that showcase your strengths in the language evaluators want to see.
             </p>
@@ -113,11 +113,9 @@ export default function ProblemStatement() {
 
             <div className="space-y-8 text-left">
               <h3 className="text-4xl font-bold text-white">Your Tender Success System</h3>
-              <p className="text-xl font-medium leading-[1.4rem] text-gray-400">
-                Tender BSD takes the complexity out of winning
-              </p>
+              <p className="text-2xl text-gray-400">Tender BSD takes the complexity out of winning</p>
 
-              <p className="text-xl font-medium leading-[1.4rem] text-gray-300">
+              <p className="text-xl text-gray-300 leading-relaxed">
                 After analyzing your tender opportunity, our WA specialists craft responses that showcase your strengths
                 in the language evaluators want to see. With rapid turnaround and proven frameworks, you'll submit with
                 confidence while others scramble to meet deadlines.
@@ -125,7 +123,7 @@ export default function ProblemStatement() {
 
               <ul className="space-y-4">
                 {keyBenefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start text-xl font-medium leading-[1.4rem] text-gray-300">
+                  <li key={index} className="flex items-start text-xl text-gray-300">
                     <CheckCircle2 className="w-6 h-6 text-purple-400 mr-4 mt-1 flex-shrink-0" />
                     <span>{benefit}</span>
                   </li>
