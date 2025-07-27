@@ -8,28 +8,25 @@ const challenges = [
     icon: Clock,
     headline: "Racing Against Deadlines",
     subtext:
-      "When tender deadlines collide with your busiest periods, quality suffers. You need weeks to prepare, but only have days.",
-    solution: "2-hour tender analysis • 5-day complete responses",
+      "When tender deadlines collide with your busiest periods, quality suffers. You need weeks to prepare, but only have days. Our 2-hour analysis and 5-day complete responses keep you ahead of the competition.",
   },
   {
     icon: FileText,
     headline: "Navigating Requirements",
     subtext:
-      "Government tender documents can run hundreds of pages. Missing one small requirement means automatic disqualification.",
-    solution: "Expert compliance review • Requirements mapping",
+      "Government tender documents can run hundreds of pages. Missing one small requirement means automatic disqualification. Our expert compliance review and requirements mapping ensure nothing is missed.",
   },
   {
     icon: Users,
     headline: "Your Best People Stuck at Desks",
     subtext:
-      "Project managers writing proposals instead of managing sites. Technical experts formatting documents instead of solving problems.",
-    solution: "Dedicated tender team • Free up your experts",
+      "Project managers writing proposals instead of managing sites. Technical experts formatting documents instead of solving problems. Our dedicated tender team frees up your experts to focus on what they do best.",
   },
   {
     icon: Lightbulb,
     headline: "Understanding What They Really Want",
-    subtext: "Each agency has unwritten preferences. What works for Main Roads might fail for Water Corporation.",
-    solution: "WA agency specialists • Insider knowledge",
+    subtext:
+      "Each agency has unwritten preferences. What works for Main Roads might fail for Water Corporation. Our WA agency specialists bring insider knowledge to every submission.",
   },
 ]
 
@@ -54,29 +51,31 @@ export default function ProblemStatement() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           {/* Main Section Header */}
           <div className="w-full text-left p-16">
-            <h2 id="challenge-heading" className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-8 pr-[26rem]">
+            <h2
+              id="challenge-heading"
+              className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-8 pr-[26rem]"
+            >
               Transform Your Tender Challenges Into Winning Submissions
             </h2>
 
             {/* Supporting Text - moved directly after heading */}
-            <p className="font-semibold text-2xl text-gray-400 leading-[1.75rem] max-w-5xl pr-[17rem]">
+            <p className="font-semibold text-2xl text-gray-400 leading-[1.75rem] max-w-5xl pr-[17rem] mb-16">
               Powered by local expertise and proven methodologies. With deep understanding of WA government requirements
               and evaluation criteria, our tender specialists ensure your submissions stand out for all the right
               reasons. We handle the paperwork complexity so you can focus on what you do best – delivering great
               projects.
             </p>
-          </div>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {challenges.map((challenge, index) => (
-              <div key={index} className="p-16 bg-gray-900/50 border border-gray-800 rounded-3xl space-y-6 text-left">
-                <challenge.icon className="w-10 h-10 text-gray-400" />
-                <h3 className="text-3xl font-bold text-white">{challenge.headline}</h3>
-                <p className="text-xl text-gray-400 leading-tight">{challenge.subtext}</p>
-                <p className="text-xl text-gray-500 font-semibold leading-tight">{challenge.solution}</p>
-              </div>
-            ))}
+            {/* Apple-style Feature Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16 max-w-6xl">
+              {challenges.map((challenge, index) => (
+                <div key={index} className="space-y-6">
+                  <challenge.icon className="w-12 h-12 text-white" strokeWidth={1.5} />
+                  <h3 className="text-3xl font-bold text-white">{challenge.headline}</h3>
+                  <p className="text-xl text-gray-400 leading-relaxed">{challenge.subtext}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Feature Highlight Card */}
