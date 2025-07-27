@@ -23,14 +23,14 @@ export default function ProblemStatement() {
   return (
     <section id="about" aria-labelledby="problem-heading" className="py-20 bg-secondary sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-center leading-7">
           <h2
             id="problem-heading"
             className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             The Challenge
           </h2>
-          <p className="max-w-3xl mx-auto leading-relaxed text-muted-foreground font-semibold text-2xl tracking-tight leading-7">
+          <p className="max-w-3xl mx-auto leading-relaxed text-muted-foreground font-semibold text-2xl tracking-tight leading-[1.8rem]">
             All businesses, especially construction and civil, face mounting pressure balancing on site and office work in an increasingly competitive tender landscape. Working on  a tender submission is usually left for the last minute.                    
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function ProblemStatement() {
             <div key={index} className="group">
               <div className="p-8 transition-all duration-300 bg-background border border-border rounded-2xl shadow-sm dark:bg-white/5 hover:scale-105 hover:shadow-md dark:hover:border-white/20">
                 <h3 className="mb-4 font-bold text-foreground tracking-tight text-3xl">{problem.title}</h3>
-                <p className="text-base leading-relaxed text-muted-foreground sm:text-xl tracking-normal font-medium">{problem.description}</p>
+                <p className="text-base leading-relaxed text-muted-foreground tracking-normal font-normal sm:text-lg">{problem.description}</p>
               </div>
             </div>
           ))}

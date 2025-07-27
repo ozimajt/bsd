@@ -32,7 +32,7 @@ export default function ValueProps() {
           >
             Proven Results
           </h2>
-          <p className="max-w-3xl mx-auto leading-relaxed text-muted-foreground tracking-normal font-semibold text-2xl leading-[2.05rem]">
+          <p className="max-w-3xl mx-auto leading-relaxed text-muted-foreground tracking-normal font-semibold text-2xl leading-6">
             We are a local team of experienced and award winning professionals, each specialising in crucial  tendering process. Our track record speaks for itself with measurable outcomes that drive your business forward.
           </p>
         </div>
