@@ -46,22 +46,24 @@ export default function ProblemStatement() {
       <section
         id="about"
         aria-labelledby="challenge-heading"
-        className="border-t border-border py-32 sm:py-40 bg-black dark:bg-black text-white"
+        className="border-t border-border py-32 sm:py-40 bg-secondary"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           {/* Main Section Header */}
           <div className="w-full text-left p-16">
             <h2
               id="challenge-heading"
-              className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-8 pr-[26rem]"
+              className="text-5xl md:text-6xl font-bold tracking-tight text-foreground mb-8 pr-[26rem]"
             >
               Transform Your Tender Challenges Into Winning Submissions
             </h2>
 
             {/* Supporting Text - moved directly after heading */}
             <p className="font-semibold text-2xl leading-[1.75rem] max-w-5xl pr-[17rem] mb-16">
-              <span className="text-purple-400">Powered by local expertise and proven methodologies.</span>{" "}
-              <span className="text-gray-400">
+              <span className="text-purple-600 dark:text-purple-400">
+                Powered by local expertise and proven methodologies.
+              </span>{" "}
+              <span className="text-muted-foreground">
                 With deep understanding of WA government requirements and evaluation criteria, our tender specialists
                 ensure your submissions stand out for all the right reasons. We handle the paperwork complexity so you
                 can focus on what you do best – delivering great projects.
@@ -72,9 +74,9 @@ export default function ProblemStatement() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16 max-w-6xl">
               {challenges.map((challenge, index) => (
                 <div key={index} className="pr-[9em]">
-                  <challenge.icon className="w-12 h-12 text-white mb-[1.4rem]" strokeWidth={1.5} />
-                  <h3 className="text-3xl font-bold text-white mb-[1.4rem]">{challenge.headline}</h3>
-                  <p className="text-gray-400 leading-[1.4rem] font-medium text-xl">{challenge.subtext}</p>
+                  <challenge.icon className="w-12 h-12 text-foreground mb-[1.4rem]" strokeWidth={1.5} />
+                  <h3 className="text-3xl font-bold text-foreground mb-[1.4rem]">{challenge.headline}</h3>
+                  <p className="text-muted-foreground leading-[1.4rem] font-medium text-xl">{challenge.subtext}</p>
                 </div>
               ))}
             </div>
@@ -83,14 +85,16 @@ export default function ProblemStatement() {
           {/* Feature Highlight Card */}
           <div
             onClick={() => setIsModalOpen(true)}
-            className="p-16 bg-gray-900/50 border border-gray-800 rounded-3xl text-left cursor-pointer hover:border-gray-700 transition-colors"
+            className="p-16 bg-background border border-border rounded-3xl text-left cursor-pointer hover:bg-muted/30 transition-colors shadow-sm"
           >
-            <h3 className="text-4xl font-bold text-white mb-4">Your Tender Success System</h3>
-            <p className="text-xl text-gray-400 leading-tight max-w-4xl">
+            <h3 className="text-4xl font-bold text-foreground mb-4">Your Tender Success System</h3>
+            <p className="text-xl text-muted-foreground leading-tight max-w-4xl">
               Tender BSD takes the complexity out of winning. After analyzing your tender opportunity, our WA
               specialists craft responses that showcase your strengths in the language evaluators want to see.
             </p>
-            <span className="mt-6 inline-block text-xl font-semibold text-purple-400">Learn more →</span>
+            <span className="mt-6 inline-block text-xl font-semibold text-purple-600 dark:text-purple-400">
+              Learn more →
+            </span>
           </div>
         </div>
       </section>
@@ -105,22 +109,20 @@ export default function ProblemStatement() {
           ></div>
 
           {/* Modal Content */}
-          <div className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-3xl p-16 overflow-y-auto">
+          <div className="relative w-full max-w-4xl max-h-[90vh] bg-background border border-border rounded-3xl p-16 overflow-y-auto shadow-xl">
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-8 right-8 text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="absolute top-8 right-8 text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Close modal"
             >
               <X className="w-8 h-8" />
             </button>
 
             <div className="space-y-8 text-left">
-              <h3 className="text-4xl font-bold text-gray-900 dark:text-white">Your Tender Success System</h3>
-              <p className="text-2xl text-gray-600 dark:text-gray-400">
-                Tender BSD takes the complexity out of winning
-              </p>
+              <h3 className="text-4xl font-bold text-foreground">Your Tender Success System</h3>
+              <p className="text-2xl text-muted-foreground">Tender BSD takes the complexity out of winning</p>
 
-              <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 After analyzing your tender opportunity, our WA specialists craft responses that showcase your strengths
                 in the language evaluators want to see. With rapid turnaround and proven frameworks, you'll submit with
                 confidence while others scramble to meet deadlines.
@@ -128,7 +130,7 @@ export default function ProblemStatement() {
 
               <ul className="space-y-4">
                 {keyBenefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start text-xl text-gray-700 dark:text-gray-300">
+                  <li key={index} className="flex items-start text-xl text-muted-foreground">
                     <CheckCircle2 className="w-6 h-6 text-purple-600 dark:text-purple-400 mr-4 mt-1 flex-shrink-0" />
                     <span>{benefit}</span>
                   </li>
