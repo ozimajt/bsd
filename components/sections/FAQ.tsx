@@ -43,7 +43,7 @@ export default function FAQ() {
           >
             Frequently Asked
           </h2>
-          <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          <p className="leading-relaxed text-muted-foreground font-semibold text-2xl">
             Get answers to common questions about our tender services.
           </p>
         </div>

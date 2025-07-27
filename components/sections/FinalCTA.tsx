@@ -22,11 +22,11 @@ export default function FinalCTA() {
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <button
             onClick={scrollToServices}
-            className="px-8 py-3 text-base font-semibold text-white bg-purple-600 rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700"
+            className="px-8 py-3 font-semibold text-white bg-purple-600 rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700 text-xl"
           >
             Choose Your Service
           </button>
-          <button className="px-8 py-3 text-base font-semibold text-foreground bg-secondary border border-border rounded-full transition-all duration-200 hover:bg-muted">
+          <button className="px-8 py-3 font-semibold text-foreground bg-secondary border border-border rounded-full transition-all duration-200 hover:bg-muted text-xl">
             Schedule Free Call
           </button>
         </div>

@@ -30,8 +30,8 @@ export default function ProblemStatement() {
           >
             The Challenge
           </h2>
-          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            All businesses, especially construction and civil, face mounting pressure balancing on site and office work in an increasingly competitive tender landscape.
+          <p className="max-w-3xl mx-auto leading-relaxed text-muted-foreground font-semibold text-2xl tracking-tight leading-7">
+            All businesses, especially construction and civil, face mounting pressure balancing on site and office work in an increasingly competitive tender landscape. Working on  a tender submission is usually left for the last minute.                    
           </p>
         </div>
 
@@ -39,8 +39,8 @@ export default function ProblemStatement() {
           {problems.map((problem, index) => (
             <div key={index} className="group">
               <div className="p-8 transition-all duration-300 bg-background border border-border rounded-2xl shadow-sm dark:bg-white/5 hover:scale-105 hover:shadow-md dark:hover:border-white/20">
-                <h3 className="mb-4 text-2xl font-bold text-foreground sm:text-3xl">{problem.title}</h3>
-                <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">{problem.description}</p>
+                <h3 className="mb-4 font-bold text-foreground tracking-tight text-3xl">{problem.title}</h3>
+                <p className="text-base leading-relaxed text-muted-foreground sm:text-xl tracking-normal font-medium">{problem.description}</p>
               </div>
             </div>
           ))}

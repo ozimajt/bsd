@@ -55,7 +55,7 @@ export default function Services() {
           >
             Our Services
           </h2>
-          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-muted-foreground sm:text-2xl font-semibold">
             Choose the perfect solution for your tender success needs.
           </p>
         </div>

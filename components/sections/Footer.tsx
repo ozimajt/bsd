@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="pt-8 mt-16 border-t border-border">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <div className="flex flex-col items-center space-y-2 md:flex-row md:space-y-0 md:space-x-6">
-              <p className="text-xs text-muted-foreground">Copyright © 2024 Tender BSD. All rights reserved.</p>
+              <p className="text-xs text-muted-foreground">Copyright © 2025 Tender BSD. All rights reserved.</p>
               <div className="flex space-x-6">
                 <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                   Privacy Policy

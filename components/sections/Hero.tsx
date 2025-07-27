@@ -75,7 +75,7 @@ export default function Hero() {
             >
               Explore Services
             </button>
-            <button className="px-9 py-4 text-lg font-semibold text-foreground bg-secondary border border-border rounded-full transition-all duration-200 hover:bg-muted">
+            <button className="px-9 py-4 text-lg font-semibold text-foreground border rounded-full transition-all duration-200 hover:bg-muted bg-secondary border-border">
               Book Consultation
             </button>
           </div>
