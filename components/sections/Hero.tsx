@@ -15,7 +15,7 @@ export default function Hero() {
     >
       <Navigation />
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-24 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center min-h-screen px-4 pt-24 sm:px-6 lg:px-8 justify-center">
         <div className="max-w-6xl mx-auto text-center">
           <p className="mb-4 font-bold text-purple-600 tracking-tight text-2xl">We help you         </p>
 
