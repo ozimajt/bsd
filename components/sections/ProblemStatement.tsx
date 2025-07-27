@@ -74,7 +74,7 @@ export default function ProblemStatement() {
                 <div key={index} className="space-y-[1.4rem]">
                   <challenge.icon className="w-12 h-12 text-white" strokeWidth={1.5} />
                   <h3 className="text-3xl font-bold text-white">{challenge.headline}</h3>
-                  <p className="text-xl text-gray-400 leading-[1.4rem]">{challenge.subtext}</p>
+                  <p className="text-gray-400 leading-[1.4rem] font-medium text-xl">{challenge.subtext}</p>
                 </div>
               ))}
             </div>
