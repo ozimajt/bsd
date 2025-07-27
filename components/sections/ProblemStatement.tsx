@@ -59,7 +59,7 @@ export default function ProblemStatement() {
             </h2>
 
             {/* Supporting Text - moved directly after heading */}
-            <p className="font-semibold text-2xl leading-[1.75rem] max-w-5xl pr-[17rem] mb-16">
+            <p className="font-medium text-xl leading-[1.4rem] max-w-5xl pr-[17rem] mb-16">
               <span className="text-purple-400">Powered by local expertise and proven methodologies.</span>{" "}
               <span className="text-gray-400">
                 With deep understanding of WA government requirements and evaluation criteria, our tender specialists
@@ -71,9 +71,9 @@ export default function ProblemStatement() {
             {/* Apple-style Feature Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16 max-w-6xl">
               {challenges.map((challenge, index) => (
-                <div key={index} className="space-y-[1.4rem] pr-[9em]">
-                  <challenge.icon className="w-12 h-12 text-white" strokeWidth={1.5} />
-                  <h3 className="text-3xl font-bold text-white">{challenge.headline}</h3>
+                <div key={index} className="pr-[9em]">
+                  <challenge.icon className="w-12 h-12 text-white mb-[1.4rem]" strokeWidth={1.5} />
+                  <h3 className="text-3xl font-bold text-white mb-[1.4rem]">{challenge.headline}</h3>
                   <p className="text-gray-400 leading-[1.4rem] font-medium text-xl">{challenge.subtext}</p>
                 </div>
               ))}
@@ -86,7 +86,7 @@ export default function ProblemStatement() {
             className="p-16 bg-gray-900/50 border border-gray-800 rounded-3xl text-left cursor-pointer hover:border-gray-700 transition-colors"
           >
             <h3 className="text-4xl font-bold text-white mb-4">Your Tender Success System</h3>
-            <p className="text-xl text-gray-400 leading-tight max-w-4xl">
+            <p className="text-xl font-medium leading-[1.4rem] text-gray-400 max-w-4xl">
               Tender BSD takes the complexity out of winning. After analyzing your tender opportunity, our WA
               specialists craft responses that showcase your strengths in the language evaluators want to see.
             </p>
@@ -113,9 +113,11 @@ export default function ProblemStatement() {
 
             <div className="space-y-8 text-left">
               <h3 className="text-4xl font-bold text-white">Your Tender Success System</h3>
-              <p className="text-2xl text-gray-400">Tender BSD takes the complexity out of winning</p>
+              <p className="text-xl font-medium leading-[1.4rem] text-gray-400">
+                Tender BSD takes the complexity out of winning
+              </p>
 
-              <p className="text-xl text-gray-300 leading-relaxed">
+              <p className="text-xl font-medium leading-[1.4rem] text-gray-300">
                 After analyzing your tender opportunity, our WA specialists craft responses that showcase your strengths
                 in the language evaluators want to see. With rapid turnaround and proven frameworks, you'll submit with
                 confidence while others scramble to meet deadlines.
@@ -123,7 +125,7 @@ export default function ProblemStatement() {
 
               <ul className="space-y-4">
                 {keyBenefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start text-xl text-gray-300">
+                  <li key={index} className="flex items-start text-xl font-medium leading-[1.4rem] text-gray-300">
                     <CheckCircle2 className="w-6 h-6 text-purple-400 mr-4 mt-1 flex-shrink-0" />
                     <span>{benefit}</span>
                   </li>
