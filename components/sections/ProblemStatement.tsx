@@ -39,8 +39,8 @@ export default function ProblemStatement() {
           {problems.map((problem, index) => (
             <div key={index} className="group">
               <div className="p-8 transition-all duration-300 bg-background border border-border rounded-2xl shadow-sm dark:bg-white/5 hover:scale-105 hover:shadow-md dark:hover:border-white/20">
-                <h3 className="mb-4 font-bold text-foreground tracking-tight text-3xl">{problem.title}</h3>
-                <p className="text-base leading-relaxed text-muted-foreground tracking-normal font-normal sm:text-lg">{problem.description}</p>
+                <h3 className="mb-4 font-bold text-foreground text-2xl tracking-normal">{problem.title}</h3>
+                <p className="leading-relaxed text-muted-foreground tracking-normal font-normal">{problem.description}</p>
               </div>
             </div>
           ))}
