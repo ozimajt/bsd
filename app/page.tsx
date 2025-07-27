@@ -7,15 +7,23 @@ import FAQ from "@/components/sections/FAQ"
 import FinalCTA from "@/components/sections/FinalCTA"
 import Footer from "@/components/sections/Footer"
 
+const SectionDivider = () => <div className="w-full h-px bg-border" />
+
 export default function Home() {
   return (
     <main className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
       <Hero />
+      <SectionDivider />
       <ProblemStatement />
+      <SectionDivider />
       <Services />
+      <SectionDivider />
       <ValueProps />
+      <SectionDivider />
       <Testimonials />
+      <SectionDivider />
       <FAQ />
+      <SectionDivider />
       <FinalCTA />
       <Footer />
     </main>
