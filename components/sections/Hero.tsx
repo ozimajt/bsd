@@ -25,7 +25,7 @@ export default function Hero() {
             style={{ fontSize: "5vh", lineHeight: "0.88" }}
           >
             <span className="block sm:inline">Win More Tenders </span>
-            <span className="block sm:inline">in Western Australia</span>
+            <span className="block sm:inline tracking-tighter">in Western Australia</span>
           </h1>
 
           <style jsx>{`
@@ -62,7 +62,7 @@ export default function Hero() {
           `}</style>
 
           <p
-            className="max-w-4xl mx-auto mb-12 font-bold text-xl text-muted-foreground sm:text-2xl md:text-3xl"
+            className="max-w-4xl mx-auto mb-12 font-bold text-xl text-muted-foreground sm:text-2xl md:text-3xl tracking-tight"
             style={{ lineHeight: "1.05" }}
           >
             Expert tender writing and analysis services that help construction businesses secure more contracts with our proven methodology.
