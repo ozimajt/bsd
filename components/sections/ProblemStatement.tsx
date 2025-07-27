@@ -71,7 +71,7 @@ export default function ProblemStatement() {
             {/* Apple-style Feature Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16 max-w-6xl">
               {challenges.map((challenge, index) => (
-                <div key={index} className="space-y-[1.4rem]">
+                <div key={index} className="space-y-[1.4rem] pr-[9em]">
                   <challenge.icon className="w-12 h-12 text-white" strokeWidth={1.5} />
                   <h3 className="text-3xl font-bold text-white">{challenge.headline}</h3>
                   <p className="text-gray-400 leading-[1.4rem] font-medium text-xl">{challenge.subtext}</p>
