@@ -54,12 +54,12 @@ export default function ProblemStatement() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           {/* Main Section Header */}
           <div className="w-full text-left p-16">
-            <h2 id="challenge-heading" className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-8">
+            <h2 id="challenge-heading" className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-8 pr-[26rem]">
               Transform Your Tender Challenges Into Winning Submissions
             </h2>
 
             {/* Supporting Text - moved directly after heading */}
-            <p className="font-semibold text-2xl text-gray-400 leading-[1.75rem] max-w-5xl">
+            <p className="font-semibold text-2xl text-gray-400 leading-[1.75rem] max-w-5xl pr-[17rem]">
               Powered by local expertise and proven methodologies. With deep understanding of WA government requirements
               and evaluation criteria, our tender specialists ensure your submissions stand out for all the right
               reasons. We handle the paperwork complexity so you can focus on what you do best – delivering great
