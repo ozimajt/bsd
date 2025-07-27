@@ -1,24 +1,24 @@
 export default function ProblemStatement() {
   return (
     <section id="about" aria-labelledby="challenge-heading" className="py-32 bg-black text-white sm:py-40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Title */}
-        <div className="mb-32 text-center">
+        <div className="mb-32 text-left">
           <h2
             id="challenge-heading"
             className="mb-8 text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl"
           >
             The Tender Trap
           </h2>
-          <p className="max-w-4xl mx-auto text-2xl font-normal text-gray-400 sm:text-3xl leading-relaxed">
+          <p className="max-w-4xl text-2xl font-normal text-gray-400 sm:text-3xl leading-relaxed mx-0">
             Why 55% of WA businesses lose winnable contracts while competitors secure the work they deserve.
           </p>
         </div>
 
         {/* Opening Statement */}
-        <div className="mb-40">
+        <div className="mb-40 px-0 text-left mt-0">
           <div className="max-w-5xl mx-auto text-center">
-            <p className="text-3xl font-medium text-white leading-relaxed sm:text-4xl">
+            <p className="text-3xl font-medium text-white leading-relaxed sm:text-4xl text-left mx-0">
               Every month, WA construction companies waste <span className="font-bold">80+ hours</span> on tender
               submissions that never win. Meanwhile, your competitors are on-site, building relationships and delivering
               projects.
@@ -28,7 +28,7 @@ export default function ProblemStatement() {
 
         {/* Challenge Grid */}
         <div className="mb-40">
-          <h3 className="mb-20 text-4xl font-bold text-center text-white sm:text-5xl">
+          <h3 className="mb-20 text-4xl font-bold text-white sm:text-5xl text-left">
             The Real Cost of Going It Alone
           </h3>
 
@@ -37,8 +37,8 @@ export default function ProblemStatement() {
             <div className="space-y-8">
               <h4 className="text-3xl font-bold text-white sm:text-4xl">Time Drain</h4>
               <div className="space-y-6">
-                <p className="text-xl font-normal text-gray-300 leading-relaxed">
-                  You're burning 2-3 weeks per tender, pulling your best people off billable work.
+                <p className="font-normal text-gray-300 leading-relaxed text-2xl leading-[1.45rem] tracking-normal">
+                  You're burning 2-3 weeks per tender, pulling your best people off billable work. Late nights formatting documents instead of planning tomorrow's site activities.
                 </p>
                 <p className="text-xl font-normal text-gray-300 leading-relaxed">
                   Late nights formatting documents instead of planning tomorrow's site activities.
