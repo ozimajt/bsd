@@ -45,7 +45,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="group">
-              <div className="flex flex-col h-full p-8 transition-all duration-300 bg-secondary border rounded-2xl shadow-sm border-border dark:bg-white/5 hover:scale-105 hover:shadow-md dark:hover:border-white/20">
+              <div className="flex flex-col h-full p-8 transition-all duration-300 bg-card border rounded-2xl shadow-sm border-border hover:scale-105 hover:shadow-md hover:bg-muted/30 dark:bg-white/5 dark:hover:bg-white/10 dark:hover:border-white/20">
                 <blockquote className="flex-1 mb-8 text-lg leading-relaxed text-foreground">
                   "{testimonial.quote}"
                 </blockquote>

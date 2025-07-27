@@ -45,7 +45,7 @@ export default function ValueProps() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric, index) => (
             <div key={index} className="text-center group">
-              <div className="p-8 transition-all duration-300 bg-background border rounded-2xl shadow-sm border-border dark:bg-white/5 hover:scale-105 hover:shadow-md dark:hover:border-white/20">
+              <div className="p-8 transition-all duration-300 bg-background border rounded-2xl shadow-sm border-border hover:scale-105 hover:shadow-md hover:bg-muted/30 dark:bg-white/5 dark:hover:bg-white/10 dark:hover:border-white/20">
                 <div className="mb-4 text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl md:text-7xl">
                   {metric.value}
                 </div>

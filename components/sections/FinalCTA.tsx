@@ -26,7 +26,7 @@ export default function FinalCTA() {
           >
             Choose Your Service
           </button>
-          <button className="px-8 py-3 font-semibold text-foreground bg-secondary border border-border rounded-full transition-all duration-200 hover:bg-muted text-xl">
+          <button className="px-8 py-3 font-semibold text-foreground bg-secondary border border-border rounded-full transition-all duration-200 hover:bg-muted hover:scale-105 text-xl">
             Schedule Free Call
           </button>
         </div>

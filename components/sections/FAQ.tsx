@@ -53,7 +53,7 @@ export default function FAQ() {
             <div key={index} className="overflow-hidden border rounded-2xl border-border bg-background shadow-sm">
               <h3>
                 <button
-                  className="flex items-center justify-between w-full px-8 py-6 text-left transition-colors bg-background hover:bg-muted dark:bg-white/5 dark:hover:bg-white/10"
+                  className="flex items-center justify-between w-full px-8 py-6 text-left transition-colors bg-background hover:bg-muted/50 dark:bg-white/5 dark:hover:bg-white/10"
                   onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}

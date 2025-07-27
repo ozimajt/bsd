@@ -79,7 +79,7 @@ export default function Services() {
                 className={`flex flex-col h-full p-8 transition-all duration-300 border rounded-2xl shadow-sm hover:scale-105 hover:shadow-md ${
                   service.popular
                     ? "bg-purple-50 border-purple-200 dark:bg-purple-500/5 dark:border-purple-500/50"
-                    : "bg-secondary border-border dark:bg-white/5"
+                    : "bg-card border-border hover:bg-muted/50 dark:bg-white/5 dark:hover:bg-white/10"
                 }`}
               >
                 <div className="mb-8 text-center">
@@ -114,7 +114,7 @@ export default function Services() {
                   className={`w-full px-6 py-3 font-semibold rounded-full transition-all duration-200 hover:scale-105 ${
                     service.popular
                       ? "bg-purple-600 text-white hover:bg-purple-700"
-                      : "bg-white text-foreground border border-border hover:bg-muted dark:bg-white/10 dark:text-white dark:border-white/20 dark:hover:bg-white/20"
+                      : "bg-foreground text-background hover:bg-foreground/90 border border-border"
                   }`}
                 >
                   Get Started
