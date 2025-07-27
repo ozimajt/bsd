@@ -10,17 +10,17 @@ export default function Navigation() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Left - Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-foreground hover:opacity-70 transition-opacity" aria-label="Tender BSD Home">
-              <span className="font-black tracking-[-0.2em] text-3xl">BSD</span>
+              <span className="font-black tracking-[-0.2em] text-2xl sm:text-3xl">BSD</span>
             </Link>
           </div>
 
           {/* Middle - Navigation */}
           <nav className="hidden lg:block" aria-label="Main navigation">
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-6 xl:space-x-8">
               <Link href="#overview" className="text-sm font-medium text-foreground transition-colors">
                 Overview
               </Link>
@@ -52,7 +52,7 @@ export default function Navigation() {
           </nav>
 
           {/* Right - Theme Toggle and Cart */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
             <ThemeToggle />
             <button
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -74,11 +74,11 @@ export default function Navigation() {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors p-1"
               aria-label="Open main menu"
               aria-expanded={isOpen}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
@@ -92,38 +92,46 @@ export default function Navigation() {
           className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border"
           aria-label="Mobile navigation"
         >
-          <div className="px-4 pt-4 pb-6 space-y-4">
-            <Link href="#overview" className="block px-3 py-2 text-base font-medium text-foreground">
+          <div className="px-4 pt-3 pb-4 space-y-2">
+            <Link
+              href="#overview"
+              className="block px-3 py-2.5 text-base font-medium text-foreground rounded-lg hover:bg-muted/50 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
               Overview
             </Link>
             <Link
               href="#services"
-              className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground"
+              className="block px-3 py-2.5 text-base font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-muted/50 transition-colors"
+              onClick={() => setIsOpen(false)}
             >
               Services
             </Link>
             <Link
               href="#results"
-              className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground"
+              className="block px-3 py-2.5 text-base font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-muted/50 transition-colors"
+              onClick={() => setIsOpen(false)}
             >
               Results
             </Link>
             <Link
               href="#faq"
-              className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground"
+              className="block px-3 py-2.5 text-base font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-muted/50 transition-colors"
+              onClick={() => setIsOpen(false)}
             >
               FAQ
             </Link>
             <Link
               href="#contact"
-              className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground"
+              className="block px-3 py-2.5 text-base font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-muted/50 transition-colors"
+              onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
             <div className="px-3 pt-2 flex items-center justify-between">
               <span className="text-sm font-medium text-muted-foreground">Shopping Bag</span>
               <button
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-foreground transition-colors p-2"
                 aria-label="View shopping bag"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

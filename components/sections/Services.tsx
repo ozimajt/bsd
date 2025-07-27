@@ -49,52 +49,56 @@ export default function Services() {
     <section
       id="services"
       aria-labelledby="services-heading"
-      className="border-t border-border py-32 sm:py-40 bg-background"
+      className="border-t border-border py-16 sm:py-24 lg:py-32 xl:py-40 bg-background"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
+        <div className="mb-12 sm:mb-16 text-center">
           <h2
             id="services-heading"
-            className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+            className="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground"
           >
             Our Services
           </h2>
-          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-muted-foreground sm:text-2xl font-semibold">
+          <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl leading-relaxed text-muted-foreground font-semibold px-4 sm:px-0">
             Choose the perfect solution for your tender success needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <div key={index} className="relative group">
               {service.popular && (
-                <div className="absolute z-10 transform -translate-x-1/2 -top-4 left-1/2">
-                  <span className="px-4 py-2 text-xs font-medium text-white bg-purple-600 rounded-full">
+                <div className="absolute z-10 transform -translate-x-1/2 -top-3 sm:-top-4 left-1/2">
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs font-medium text-white bg-purple-600 rounded-full">
                     Most Popular
                   </span>
                 </div>
               )}
 
               <div
-                className={`flex flex-col h-full p-8 transition-all duration-300 border rounded-2xl shadow-sm hover:scale-105 hover:shadow-md ${
+                className={`flex flex-col h-full p-6 sm:p-8 transition-all duration-300 border rounded-2xl shadow-sm hover:scale-105 hover:shadow-md ${
                   service.popular
                     ? "bg-purple-50 border-purple-200 dark:bg-purple-500/5 dark:border-purple-500/50"
                     : "bg-card border-border hover:bg-muted/50 dark:bg-white/5 dark:hover:bg-white/10"
                 }`}
               >
-                <div className="mb-8 text-center">
-                  <h3 className="mb-2 text-2xl font-bold text-foreground sm:text-3xl">{service.name}</h3>
-                  <div className="mb-2 text-4xl font-extrabold text-foreground sm:text-5xl">{service.price}</div>
+                <div className="mb-6 sm:mb-8 text-center">
+                  <h3 className="mb-2 text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">{service.name}</h3>
+                  <div className="mb-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground">
+                    {service.price}
+                  </div>
                   <p className="text-sm font-semibold text-muted-foreground">{service.duration}</p>
-                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">{service.description}</p>
+                  <p className="mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
+                    {service.description}
+                  </p>
                 </div>
 
                 <div className="flex-1">
-                  <ul className="mb-8 space-y-3">
+                  <ul className="mb-6 sm:mb-8 space-y-2 sm:space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
                         <svg
-                          className="flex-shrink-0 w-5 h-5 mt-0.5 mr-3 text-purple-500 dark:text-purple-400"
+                          className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 mt-0.5 mr-2 sm:mr-3 text-purple-500 dark:text-purple-400"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -111,7 +115,7 @@ export default function Services() {
                 </div>
 
                 <button
-                  className={`w-full px-6 py-3 font-semibold rounded-full transition-all duration-200 hover:scale-105 ${
+                  className={`w-full px-4 sm:px-6 py-2.5 sm:py-3 font-semibold rounded-full transition-all duration-200 hover:scale-105 text-sm sm:text-base ${
                     service.popular
                       ? "bg-purple-600 text-white hover:bg-purple-700"
                       : "bg-foreground text-background hover:bg-foreground/90 border border-border"
