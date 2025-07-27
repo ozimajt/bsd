@@ -17,7 +17,7 @@ export default function Hero() {
 
       <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-24 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="mb-4 font-medium tracking-wide text-sm text-muted-foreground sm:text-base">Tender BSD</p>
+          <p className="mb-4 font-bold text-purple-600 tracking-tight text-2xl">We help you         </p>
 
           <h1
             id="hero-heading"
@@ -65,19 +65,18 @@ export default function Hero() {
             className="max-w-4xl mx-auto mb-12 font-bold text-xl text-muted-foreground sm:text-2xl md:text-3xl"
             style={{ lineHeight: "1.05" }}
           >
-            Expert tender writing and analysis services that help construction businesses secure more contracts with our
-            proven 65% win rate methodology.
+            Expert tender writing and analysis services that help construction businesses secure more contracts with our proven methodology.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <button
               onClick={scrollToServices}
-              className="px-9 py-4 text-lg font-semibold text-white bg-purple-600 rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700"
+              className="px-9 py-4 font-semibold text-white rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700 bg-purple-600 text-xl"
             >
               Explore Services
             </button>
             <button className="px-9 py-4 text-lg font-semibold text-foreground bg-secondary border border-border rounded-full transition-all duration-200 hover:bg-muted">
-              Book Free Consultation
+              Book Consultation
             </button>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function Navigation() {
           {/* Left - Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-foreground hover:opacity-70 transition-opacity" aria-label="Tender BSD Home">
-              <span className="text-2xl font-black tracking-tighter">BSD</span>
+              <span className="font-black tracking-[-0.2em] text-3xl">BSD</span>
             </Link>
           </div>
 
