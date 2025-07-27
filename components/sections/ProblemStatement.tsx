@@ -59,20 +59,22 @@ export default function ProblemStatement() {
             </h2>
 
             {/* Supporting Text - moved directly after heading */}
-            <p className="font-semibold text-2xl text-gray-400 leading-[1.75rem] max-w-5xl pr-[17rem] mb-16">
-              Powered by local expertise and proven methodologies. With deep understanding of WA government requirements
-              and evaluation criteria, our tender specialists ensure your submissions stand out for all the right
-              reasons. We handle the paperwork complexity so you can focus on what you do best – delivering great
-              projects.
+            <p className="font-semibold text-2xl leading-[1.75rem] max-w-5xl pr-[17rem] mb-16">
+              <span className="text-purple-400">Powered by local expertise and proven methodologies.</span>{" "}
+              <span className="text-gray-400">
+                With deep understanding of WA government requirements and evaluation criteria, our tender specialists
+                ensure your submissions stand out for all the right reasons. We handle the paperwork complexity so you
+                can focus on what you do best – delivering great projects.
+              </span>
             </p>
 
             {/* Apple-style Feature Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16 max-w-6xl">
               {challenges.map((challenge, index) => (
-                <div key={index} className="space-y-6">
+                <div key={index} className="space-y-[1.4rem]">
                   <challenge.icon className="w-12 h-12 text-white" strokeWidth={1.5} />
                   <h3 className="text-3xl font-bold text-white">{challenge.headline}</h3>
-                  <p className="text-xl text-gray-400 leading-relaxed">{challenge.subtext}</p>
+                  <p className="text-xl text-gray-400 leading-[1.4rem]">{challenge.subtext}</p>
                 </div>
               ))}
             </div>
