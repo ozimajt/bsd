@@ -46,7 +46,7 @@ export default function ProblemStatement() {
       <section
         id="about"
         aria-labelledby="challenge-heading"
-        className="border-t border-border py-32 sm:py-40 bg-black text-white"
+        className="border-t border-border py-32 sm:py-40 bg-black dark:bg-black text-white"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           {/* Main Section Header */}
