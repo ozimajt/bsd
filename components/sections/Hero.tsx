@@ -17,7 +17,7 @@ export default function Hero() {
 
       <div className="flex flex-col items-center min-h-screen px-4 pt-24 sm:px-6 lg:px-8 justify-center">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="mb-4 font-bold text-purple-600 tracking-tight text-2xl">We help you         </p>
+          <p className="mb-4 font-bold text-purple-600 tracking-tight text-2xl">We help you </p>
 
           <h1
             id="hero-heading"
@@ -65,7 +65,8 @@ export default function Hero() {
             className="max-w-4xl mx-auto mb-12 font-bold text-xl text-muted-foreground sm:text-2xl md:text-3xl tracking-tight"
             style={{ lineHeight: "1.05" }}
           >
-            Expert tender writing and analysis services that help construction businesses secure more contracts with our proven methodology.
+            Expert tender writing and analysis services that help construction businesses secure more contracts with our
+            proven methodology.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -79,10 +80,8 @@ export default function Hero() {
               Book Consultation
             </button>
           </div>
-        </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <p className="text-sm font-medium text-center text-muted-foreground">
+          <p className="mt-12 text-sm font-medium text-center text-muted-foreground">
             Tender BSD now features industry-leading analysis capabilities.{" "}
             <a
               href="#services"

@@ -59,6 +59,16 @@ export default function ProblemStatement() {
             </h2>
           </div>
 
+          {/* Supporting Text Below Cards */}
+          <div className="w-full text-left">
+            <p className="font-semibold text-2xl text-gray-400 leading-[1.75rem] max-w-5xl">
+              Powered by local expertise and proven methodologies. With deep understanding of WA government requirements
+              and evaluation criteria, our tender specialists ensure your submissions stand out for all the right
+              reasons. We handle the paperwork complexity so you can focus on what you do best – delivering great
+              projects.
+            </p>
+          </div>
+
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {challenges.map((challenge, index) => (
@@ -82,16 +92,6 @@ export default function ProblemStatement() {
               specialists craft responses that showcase your strengths in the language evaluators want to see.
             </p>
             <span className="mt-6 inline-block text-xl font-semibold text-purple-400">Learn more →</span>
-          </div>
-
-          {/* Supporting Text Below Cards */}
-          <div className="w-full text-left">
-            <p className="text-xl text-gray-400 leading-relaxed max-w-5xl">
-              Powered by local expertise and proven methodologies. With deep understanding of WA government requirements
-              and evaluation criteria, our tender specialists ensure your submissions stand out for all the right
-              reasons. We handle the paperwork complexity so you can focus on what you do best – delivering great
-              projects.
-            </p>
           </div>
         </div>
       </section>
