@@ -30,16 +30,13 @@ export default function ValueProps() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <h2
-            id="value-props-heading"
-            className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
-          >
+          <h2 id="value-props-heading" className="mb-6 text-foreground">
             Proven Results
           </h2>
-          <p className="max-w-3xl mx-auto leading-relaxed text-muted-foreground tracking-normal font-semibold text-2xl leading-6">
+          <h5 className="max-w-3xl mx-auto text-muted-foreground tracking-normal">
             We are a local team of experienced and award winning professionals, each specialising in crucial tendering
             process. Our track record speaks for itself with measurable outcomes that drive your business forward.
-          </p>
+          </h5>
         </div>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">

@@ -19,69 +19,29 @@ export default function Hero() {
         <div className="max-w-6xl mx-auto text-center">
           <p className="mb-4 font-bold text-purple-600 tracking-tight text-2xl">We help you </p>
 
-          <h1
-            id="hero-heading"
-            className="mb-8 font-extrabold leading-none tracking-tight"
-            style={{ fontSize: "5vh", lineHeight: "0.88" }}
-          >
+          <h1 id="hero-heading" className="mb-8 text-foreground tracking-tight">
             <span className="block sm:inline">Win More Tenders </span>
             <span className="block sm:inline tracking-tighter">in Western Australia</span>
           </h1>
 
-          <style jsx>{`
-            @media (min-width: 640px) {
-              h1 {
-                font-size: 3.5rem !important;
-                line-height: 0.88 !important;
-              }
-            }
-            @media (min-width: 768px) {
-              h1 {
-                font-size: 4.5rem !important;
-                line-height: 0.88 !important;
-              }
-            }
-            @media (min-width: 1024px) {
-              h1 {
-                font-size: 5.5rem !important;
-                line-height: 0.88 !important;
-              }
-            }
-            @media (min-width: 1280px) {
-              h1 {
-                font-size: 6.5rem !important;
-                line-height: 0.88 !important;
-              }
-            }
-            @media (min-width: 1536px) {
-              h1 {
-                font-size: 7.5rem !important;
-                line-height: 0.88 !important;
-              }
-            }
-          `}</style>
-
-          <p
-            className="max-w-4xl mx-auto mb-12 font-bold text-xl text-muted-foreground sm:text-2xl md:text-3xl tracking-tight"
-            style={{ lineHeight: "1.05" }}
-          >
+          <h3 className="max-w-4xl mx-auto mb-12 text-muted-foreground tracking-tight px-4 sm:px-0">
             Expert tender writing and analysis services that help construction businesses secure more contracts with our
             proven methodology.
-          </p>
+          </h3>
 
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row px-4 sm:px-0">
             <button
               onClick={scrollToServices}
-              className="px-9 py-4 font-semibold text-white rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700 bg-purple-600 text-xl"
+              className="w-full sm:w-auto px-6 sm:px-9 py-3 sm:py-4 font-semibold text-white rounded-full transition-all duration-200 hover:scale-105 hover:bg-purple-700 bg-purple-600 text-lg sm:text-xl"
             >
               Explore Services
             </button>
-            <button className="px-9 py-4 text-lg font-semibold text-foreground border rounded-full transition-all duration-200 hover:bg-muted bg-secondary border-border">
+            <button className="w-full sm:w-auto px-6 sm:px-9 py-3 sm:py-4 text-lg font-semibold text-foreground border rounded-full transition-all duration-200 hover:bg-muted bg-secondary border-border">
               Book Consultation
             </button>
           </div>
 
-          <p className="mt-12 text-sm font-medium text-center text-muted-foreground">
+          <p className="mt-8 sm:mt-12 text-xs sm:text-sm font-medium text-center text-muted-foreground px-4 sm:px-0">
             Tender BSD now features industry-leading analysis capabilities.{" "}
             <a
               href="#services"

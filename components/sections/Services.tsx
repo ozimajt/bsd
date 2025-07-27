@@ -53,15 +53,12 @@ export default function Services() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <h2
-            id="services-heading"
-            className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl"
-          >
+          <h2 id="services-heading" className="mb-6 text-foreground">
             Our Services
           </h2>
-          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-muted-foreground sm:text-2xl font-semibold">
+          <h3 className="max-w-3xl mx-auto text-muted-foreground">
             Choose the perfect solution for your tender success needs.
-          </p>
+          </h3>
         </div>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -83,7 +80,7 @@ export default function Services() {
                 }`}
               >
                 <div className="mb-8 text-center">
-                  <h3 className="mb-2 text-2xl font-bold text-foreground sm:text-3xl">{service.name}</h3>
+                  <h4 className="mb-2 text-foreground">{service.name}</h4>
                   <div className="mb-2 text-4xl font-extrabold text-foreground sm:text-5xl">{service.price}</div>
                   <p className="text-sm font-semibold text-muted-foreground">{service.duration}</p>
                   <p className="mt-4 text-base leading-relaxed text-muted-foreground">{service.description}</p>

@@ -78,4 +78,92 @@
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
+
+  /* Typography System */
+  h1 {
+    font-weight: 800;
+    line-height: 0.88;
+    letter-spacing: -0.025em;
+    font-size: 5vh;
+  }
+
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 5.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h1 {
+      font-size: 6.5rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    h1 {
+      font-size: 7.5rem;
+    }
+  }
+
+  h2 {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 3.75rem;
+    }
+  }
+
+  h3 {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.875rem;
+    }
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  h6 {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.4rem;
+  }
 }
