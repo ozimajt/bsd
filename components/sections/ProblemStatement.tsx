@@ -1,174 +1,168 @@
+"use client"
+
+import { useState } from "react"
+
 export default function ProblemStatement() {
+  const [selectedCard, setSelectedCard] = useState<number | null>(null)
+
+  const cards = [
+    {
+      icon: "⏰",
+      headline: "Racing Against Deadlines",
+      subtext:
+        "When tender deadlines collide with your busiest periods, quality suffers. You need weeks to prepare, but only have days.",
+      solution: "2-hour tender analysis • 5-day complete responses",
+    },
+    {
+      icon: "📋",
+      headline: "Navigating Requirements",
+      subtext:
+        "Government tender documents can run hundreds of pages. Missing one small requirement means automatic disqualification.",
+      solution: "Expert compliance review • Requirements mapping",
+    },
+    {
+      icon: "👥",
+      headline: "Your Best People Stuck at Desks",
+      subtext:
+        "Project managers writing proposals instead of managing sites. Technical experts formatting documents instead of solving problems.",
+      solution: "Dedicated tender team • Free up your experts",
+    },
+    {
+      icon: "💡",
+      headline: "Understanding What They Really Want",
+      subtext: "Each agency has unwritten preferences. What works for Main Roads might fail for Water Corporation.",
+      solution: "WA agency specialists • Insider knowledge",
+    },
+  ]
+
   return (
-    <section id="about" aria-labelledby="challenge-heading" className="py-32 bg-black text-white sm:py-40">
-      {/* Thin grey divider line */}
-      <div className="w-full h-px bg-gray-800 mb-32"></div>
+    <>
+      {/* Section Divider */}
+      <div className="w-full h-px bg-gray-200 dark:bg-gray-800"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <div className="mb-32 w-full">
-          <h2
-            id="challenge-heading"
-            className="mb-8 text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl text-left w-full"
-          >
-            The Tender Trap
-          </h2>
-          <p className="w-full text-2xl font-normal text-gray-400 sm:text-3xl leading-relaxed text-left">
-            Why 55% of WA businesses lose winnable contracts while competitors secure the work they deserve.
-          </p>
-        </div>
+      <section
+        id="about"
+        aria-labelledby="challenge-heading"
+        className="py-32 bg-white dark:bg-black text-black dark:text-white sm:py-40"
+      >
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          {/* Section Title */}
+          <div className="mb-20 text-left max-w-7xl mx-auto">
+            <h2 id="challenge-heading" className="mb-8 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
+              Transform Your Tender Challenges Into Winning Submissions
+            </h2>
+          </div>
 
-        {/* Thin grey divider line */}
-        <div className="w-full h-px bg-gray-800 mb-32"></div>
+          {/* Cards Grid */}
+          <div className="max-w-7xl mx-auto mb-20">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {cards.map((card, index) => (
+                <div
+                  key={index}
+                  className="group cursor-pointer"
+                  onClick={() => setSelectedCard(selectedCard === index ? null : index)}
+                >
+                  <div className="h-full bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-700">
+                    <div className="p-16">
+                      {/* Icon */}
+                      <div className="text-4xl mb-6 text-left">{card.icon}</div>
 
-        {/* Opening Statement */}
-        <div className="mb-40 w-full">
-          <p className="w-full text-3xl font-medium text-white leading-relaxed sm:text-4xl text-left">
-            Every month, WA construction companies waste <span className="font-bold">80+ hours</span> on tender
-            submissions that never win. Meanwhile, your competitors are on-site, building relationships and delivering
-            projects.
-          </p>
-        </div>
+                      {/* Headline */}
+                      <h3 className="text-xl font-bold mb-4 text-left leading-tight">{card.headline}</h3>
 
-        {/* Thin grey divider line */}
-        <div className="w-full h-px bg-gray-800 mb-32"></div>
+                      {/* Subtext */}
+                      <p
+                        className="text-xl text-gray-600 dark:text-gray-400 mb-6 text-left"
+                        style={{ lineHeight: "1.25rem" }}
+                      >
+                        {card.subtext}
+                      </p>
 
-        {/* Challenge Section */}
-        <div className="mb-40 w-full">
-          <h3 className="mb-20 text-4xl font-bold text-white sm:text-5xl text-left w-full">
-            The Real Cost of Going It Alone
-          </h3>
-
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
-            {/* Time Drain Card */}
-            <div className="p bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-sm">
-              <h4 className="text-2xl font-bold text-white mb-6 text-left">Time Drain</h4>
-              <div className="space-y-4 text-left">
-                <p className="text-lg font-normal text-gray-300 leading-relaxed">
-                  You're burning 2-3 weeks per tender, pulling your best people off billable work.
-                </p>
-                <p className="text-lg font-normal text-gray-300 leading-relaxed">
-                  Late nights formatting documents instead of planning tomorrow's site activities.
-                </p>
-              </div>
-            </div>
-
-            {/* Knowledge Gaps Card */}
-            <div className="p bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-sm">
-              <h4 className="text-2xl font-bold text-white mb-6 text-left">Knowledge Gaps</h4>
-              <div className="space-y-4 text-left">
-                <p className="text-lg font-normal text-gray-300 leading-relaxed">
-                  Government tender language feels like a foreign language.
-                </p>
-                <p className="text-lg font-normal text-gray-300 leading-relaxed">
-                  Missing one compliance requirement = instant disqualification.
-                </p>
-                <p className="text-lg font-normal text-gray-300 leading-relaxed">
-                  WAIPS protocols change faster than you can keep up.
-                </p>
-              </div>
-            </div>
-
-            {/* Competitive Disadvantage Card */}
-            <div className="p bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-sm">
-              <h4 className="text-2xl font-bold text-white mb-6 text-left">Competitive Disadvantage</h4>
-              <div className="space-y-4 text-left">
-                <p className="text-lg font-normal text-gray-300 leading-relaxed">
-                  Your competitors have dedicated tender teams while you're juggling everything.
-                </p>
-                <p className="text-lg font-normal text-gray-300 leading-relaxed">
-                  Professional firms are winning 'your' contracts with polished submissions.
-                </p>
-              </div>
-            </div>
-
-            {/* Opportunity Cost Card */}
-            <div className="p bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-sm">
-              <h4 className="text-2xl font-bold text-white mb-6 text-left">Opportunity Cost</h4>
-              <div className="space-y-4 text-left">
-                <p className="text-lg font-normal text-gray-300 leading-relaxed">
-                  While you're writing one tender, three more opportunities pass by.
-                </p>
-                <p className="text-lg font-normal text-gray-300 leading-relaxed">
-                  Your team's morale drops with each rejection letter.
-                </p>
-              </div>
+                      {/* Solution Preview */}
+                      <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 text-left">
+                        {card.solution}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
 
-        {/* Thin grey divider line */}
-        <div className="w-full h-px bg-gray-800 mb-32"></div>
+          {/* Feature Highlight Modal */}
+          {selectedCard !== null && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+              <div className="max-w-4xl mx-4 bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-2xl">
+                <div className="p-16">
+                  <div className="flex justify-between items-start mb-8">
+                    <div>
+                      <h3 className="text-4xl font-bold mb-2 text-left">Your Tender Success System</h3>
+                      <p className="text-xl text-gray-600 dark:text-gray-400 text-left">
+                        Tender BSD takes the complexity out of winning
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => setSelectedCard(null)}
+                      className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl"
+                    >
+                      ×
+                    </button>
+                  </div>
 
-        {/* Bridge Statement */}
-        <div className="mb-40 w-full">
-          <p className="w-full text-3xl font-bold text-gray-300 sm:text-4xl text-left">
-            But here's what the winning 45% know that you don't...
-          </p>
-        </div>
+                  <p
+                    className="text-xl mb-8 text-left text-gray-800 dark:text-gray-200"
+                    style={{ lineHeight: "1.25rem" }}
+                  >
+                    After analyzing your tender opportunity, our WA specialists craft responses that showcase your
+                    strengths in the language evaluators want to see. With rapid turnaround and proven frameworks,
+                    you'll submit with confidence while others scramble to meet deadlines.
+                  </p>
 
-        {/* Thin grey divider line */}
-        <div className="w-full h-px bg-gray-800 mb-32"></div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div className="text-left">
+                      <h4 className="font-bold mb-2">Rapid Response</h4>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        Know viability in 2 hours, complete submissions in 5 days
+                      </p>
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-bold mb-2">Priority Processing</h4>
+                      <p className="text-gray-600 dark:text-gray-400">Jump the queue with our fast-track service</p>
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-bold mb-2">Expert Team</h4>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        Former government evaluators and industry specialists
+                      </p>
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-bold mb-2">Local Advantage</h4>
+                      <p className="text-gray-600 dark:text-gray-400">Deep knowledge of WA procurement processes</p>
+                    </div>
+                  </div>
 
-        {/* Solution Section */}
-        <div className="mb-32 w-full">
-          <h3 className="mb-20 text-4xl font-bold text-white sm:text-5xl text-left w-full">The Tender BSD Advantage</h3>
-
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
-            {/* Local Knowledge Card */}
-            <div className="p bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-sm">
-              <h4 className="text-2xl font-bold text-white mb-6 text-left">Local Knowledge That Wins</h4>
-              <p className="text-lg font-normal text-gray-300 leading-relaxed text-left">
-                We've decoded every WA government agency's preferences with direct relationships and insider knowledge
-                of which buzzwords open doors and which ones close them.
-              </p>
+                  <button className="w-full bg-black dark:bg-white text-white dark:text-black py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity">
+                    Start Winning More Tenders
+                  </button>
+                </div>
+              </div>
             </div>
+          )}
 
-            {/* Speed Card */}
-            <div className="p bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-sm">
-              <h4 className="text-2xl font-bold text-white mb-6 text-left">Speed That Beats Deadlines</h4>
-              <p className="text-lg font-normal text-gray-300 leading-relaxed text-left">
-                Get tender analysis in 2 hours and complete responses in 5 days while competitors scramble at the
-                deadline.
-              </p>
-            </div>
-
-            {/* Results Card */}
-            <div className="p bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-sm">
-              <h4 className="text-2xl font-bold text-white mb-6 text-left">Results That Speak Volumes</h4>
-              <p className="text-lg font-normal text-gray-300 leading-relaxed text-left">
-                <span className="font-bold">65% win rate</span> vs 45% industry average,{" "}
-                <span className="font-bold">$47M in contracts</span> won for WA businesses, and{" "}
-                <span className="font-bold">3.2x ROI</span> average for our clients.
-              </p>
-            </div>
-
-            {/* Aboriginal Support Card */}
-            <div className="p bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-sm">
-              <h4 className="text-2xl font-bold text-white mb-6 text-left">Specialized Aboriginal Support</h4>
-              <p className="text-lg font-normal text-gray-300 leading-relaxed text-left">
-                Navigate cultural protocols and procurement targets with our Aboriginal business specialists on staff
-                and access to exclusive networks.
-              </p>
-            </div>
+          {/* Supporting Text */}
+          <div className="max-w-7xl mx-auto text-left">
+            <p className="text-xl text-gray-600 dark:text-gray-400" style={{ lineHeight: "1.25rem" }}>
+              Powered by local expertise and proven methodologies. With deep understanding of WA government requirements
+              and evaluation criteria, our tender specialists ensure your submissions stand out for all the right
+              reasons. We handle the paperwork complexity so you can focus on what you do best – delivering great
+              projects.
+            </p>
           </div>
         </div>
+      </section>
 
-        {/* Thin grey divider line */}
-        <div className="w-full h-px bg-gray-800 mb-32"></div>
-
-        {/* Closing Statement */}
-        <div className="w-full">
-          <p className="w-full text-3xl font-medium text-white leading-relaxed sm:text-4xl text-left">
-            Every day you delay is another tender opportunity lost to a competitor who's already using professional
-            help. The question isn't whether you can afford Tender BSD —{" "}
-            <span className="font-bold">it's whether you can afford to keep losing.</span>
-          </p>
-        </div>
-      </div>
-
-      {/* Bottom divider line */}
-      <div className="w-full h-px bg-gray-800 mt-32"></div>
-    </section>
+      {/* Section Divider */}
+      <div className="w-full h-px bg-gray-200 dark:bg-gray-800"></div>
+    </>
   )
 }
