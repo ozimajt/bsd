@@ -30,7 +30,7 @@ export default function ProblemStatement() {
           >
             The Challenge
           </h2>
-          <p className="max-w-3xl mx-auto leading-relaxed text-muted-foreground font-semibold text-2xl tracking-tight leading-[1.8rem]">
+          <p className="max-w-3xl mx-auto leading-relaxed text-muted-foreground font-semibold text-2xl tracking-tight leading-7">
             All businesses, especially construction and civil, face mounting pressure balancing on site and office work in an increasingly competitive tender landscape. Working on  a tender submission is usually left for the last minute.                    
           </p>
         </div>
