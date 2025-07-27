@@ -53,7 +53,7 @@ export default function ProblemStatement() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           {/* Main Section Header */}
-          <div className="w-full text-left">
+          <div className="w-full text-left p-16">
             <h2 id="challenge-heading" className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-8">
               Transform Your Tender Challenges Into Winning Submissions
             </h2>
