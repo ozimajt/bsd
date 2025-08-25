@@ -1,18 +1,10 @@
 import type { Config } from "tailwindcss"
-import defaultConfig from "shadcn/ui/tailwind.config"
 
 const config: Config = {
-  ...defaultConfig,
-  content: [
-    ...defaultConfig.content,
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "*.{js,ts,jsx,tsx,mdx}",
-  ],
+  darkMode: ["class"],
+  content: ["./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}", "*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    ...defaultConfig.theme,
     extend: {
-      ...defaultConfig.theme.extend,
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -82,9 +74,14 @@ const config: Config = {
       backdropBlur: {
         xl: "24px",
       },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
     },
   },
-  plugins: [...defaultConfig.plugins, require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate")],
 }
 
 export default config
