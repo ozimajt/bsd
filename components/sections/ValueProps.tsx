@@ -1,0 +1,58 @@
+const metrics = [
+  {
+    value: "65%",
+    label: "Win Rate",
+    description: "3x Higher than industry average",
+  },
+  {
+    value: "2",
+    label: "Hours",
+    description: "Lightning Fast analysis",
+  },
+  {
+    value: "15+",
+    label: "Years",
+    description: "WA Expertise",
+  },
+  {
+    value: "10x",
+    label: "ROI",
+    description: "Guarantee",
+  },
+]
+
+export default function ValueProps() {
+  return (
+    <section
+      id="results"
+      aria-labelledby="value-props-heading"
+      className="border-t border-border py-32 sm:py-40 bg-secondary"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 text-center">
+          <h2 id="value-props-heading" className="mb-6 text-foreground">
+            Proven Results
+          </h2>
+          <h5 className="mx-auto text-muted-foreground tracking-normal">
+            We are a local team of experienced and award winning professionals, each specialising in crucial tendering
+            process. Our track record speaks for itself with measurable outcomes that drive your business forward.
+          </h5>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {metrics.map((metric, index) => (
+            <div key={index} className="text-center group">
+              <div className="p-8 transition-all duration-300 bg-background border rounded-2xl shadow-sm border-border hover:scale-105 hover:shadow-md hover:bg-muted/30 dark:bg-white/5 dark:hover:bg-white/10 dark:hover:border-white/20">
+                <div className="mb-4 text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl md:text-7xl">
+                  {metric.value}
+                </div>
+                <div className="mb-2 text-xl font-bold text-foreground sm:text-2xl">{metric.label}</div>
+                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{metric.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
